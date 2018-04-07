@@ -22,12 +22,16 @@ Push all your coding activities to GitHub by following the below instructions
 	
 	<i>$ git add .</i>
 
+5. check if there are stagged files by
+
+	<i>$ git status</i>
+	
 	if there is <b>green file names</b>, it means files are stagged
 
-5. if there are any stagged files, commit them by typing
+6. if there are any stagged files, commit them by typing
 	
 	<i>$ git commit -m "YOUR NOTE HERE"</i>
 
-6. if you want to push the commits to your repository, type
+7. if you want to push the commits to your repository, type
 	
 	<i>$ git push</i>
