@@ -35,3 +35,7 @@ Push all your coding activities to GitHub by following the below instructions
 7. if you want to push the commits to your repository, type
 	
 	<i>$ git push</i>
+
+8. check if files have been pushed correctly by visiting
+
+	<i>https://github.com/sovannsok/html</i>
