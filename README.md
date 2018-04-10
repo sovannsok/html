@@ -20,8 +20,11 @@ Push all your coding activities to GitHub by following the below instructions
 
 4. if there are any files, stag them by typing
 	
-	<i>$ git add .</i>
+	<i>$ git add .</i
+	<b>or</b>
 
+	<i>$ git add $FILE_NAME_TO_BE_PUSHED
+	
 5. check if there are stagged files by
 
 	<i>$ git status</i>
