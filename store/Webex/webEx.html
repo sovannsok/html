@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>webEx</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="57x57" href="html/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="html/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="html/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="html/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="html/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="html/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="html/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="html/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="html/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="html/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="html/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="html/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="html/favicon-16x16.png">
+    <link rel="manifest" href="html/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="html/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div id="webIco" class="iconBackground">
+        <img id="icon_image" onclick="document.getElementById('icon_image').style.rel = 'file:///C:/Users/sovansok/Desktop/Coding/html/store/Schools%20sublime%20project--web/webEx.html#';" class="web_icon hover" src="data:image/png;base64,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">
+        <span style="border: solid 16px red; margin-top: 45px;">
+            <span style="border: solid 16px lightblue;" class="hover">
+                <a href="#" onclick="homeEvent()" id="icoHome" class="icoStyle">Home</a>
+            </span>
+            <span style="border: solid 16px lightblue;" class="hover">
+                <a href="file:///C:/Users/sovansok/Desktop/Coding/html/store/Schools%20sublime%20project--web/web_contact.html" onclick="contactEvent()"id="icoContact" class="icoStyle">Contact</a>
+            </span>
+            <span style="border: solid 16px lightblue;" class="hover">  
+                <a href="file:///C:/Users/sovansok/Desktop/Coding/html/store/Schools%20sublime%20project--web/web_signin.html" onclick="signinEvent()"id="icoSignin" class="icoStyle">Signin</a>
+            </span>
+            <span style="border: solid 16px lightblue;" class="hover">  
+                <a href="#" onclick="helpEvent()" id="icoHelp" class="icoStyle">Help</a>
+            </span>
+            <span style="border: solid 16px lightblue;" class="hover">  
+                <a href="file:///C:/Users/sovansok/Desktop/Coding/html/store/Schools%20sublime%20project--web/web_explore.html" onclick="homeEvent()" id="icoExplore" class="icoStyle">Explore</a>
+            </span>
+        </span>
+        <span>
+            <div>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+            </div>
+            <div>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+            </div>
+            <div>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+            </div>
+        </span>
+    </div>
+    <div id="blank_div">
+        <div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+        </div>
+        <div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+        </div>
+        <div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+        </div>
+    </div>
+    <div id="webTitle">
+        <h1>Welcome to web explorer</h1>
+    </div>
+
+    <!-- ENGINES: -->
+
+    <script type="text/javascript">
+        function homeEvent() {
+            document.getElementById("icoHome")
+        }
+
+        function contactEvent() {
+            document.getElementById("icoContact")
+        }
+
+        function signinEvent() {
+            document.getElementById("icoSignin")
+        }
+
+        function helpEvent() {
+            document.getElementById("icoHelp")
+        }
+
+        function exploreEvent() {
+            document.getElementById("icoExplore")
+        }
+    </script>
+        
+    <!-- STYLES: -->
+
+    <style type="text/css">
+        .web_icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .iconBackground {
+            background-color: aqua;
+        }
+
+        body {
+            background-color: lime;
+        }
+
+        .hover:hover {
+            border: solid 15px red; 
+        }
+
+        .icoStyle {
+            font-weight: 50px;
+            height: 50px;
+            text-decoration: none;
+        }
+    </style>
+
+    <!-- 
+
+        W3chools animation example:
+
+        function myMove() {
+      var elem = document.getElementById("animate");   
+      var postion = 0;
+      var id = setInterval(frame, 55);
+      function frame() {
+        if (postion == 350) {
+          clearInterval(id);
+        } else {
+          postion++; 
+          elem.style.top = postion + 'px'; 
+          elem.style.left = postion + 'px'; 
+        }
+      }
+    }
+
+     -->
+</body>
+</html>
