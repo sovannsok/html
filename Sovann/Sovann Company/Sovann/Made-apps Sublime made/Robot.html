@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robot</title>
+</head>
+<body>
+
+<style type="text/css">
+	.robotEye1 {
+		background-color: blue;
+		border-radius: 50px;
+		width: 10px; 
+		height: 10px;
+	}
+
+	.robotEye2 {
+		background-color: blue;
+		border-radius: 50px;
+		width: 10px;
+		height: 10px;
+	}
+
+	.robot {
+		width: 100px;
+		height: 360px;
+		background-color: hsl(48, 89%, 70%);
+		position: absolute;
+	}
+
+	.robotFace {
+		border-radius: 50px;
+		width: 60px;
+		height: 72px;
+		background-color: yellow;
+		margin-left: 20px;
+		margin-top: 50px;
+	}
+
+	.robotMouth {
+		background-color: grey;
+		border-color: lightgrey;
+		border-style: solid;
+		border-width: 5px;
+		margin-top: 20px;
+		width: 28px;
+		height: 5px;
+		margin-left: 15px;
+	}
+</style>
+
+<script type="text/javascript">
+startEngine();
+	function startEngine() {
+		alert("Ready to start the engine!");
+		moveRobot()
+	}
+
+	function moveRobot() {
+		var robotSteps = 10;
+		document.getElementById("robot").innerHTML = style.left = robotSteps;
+	}
+</script>
+
+<div class="robot" id="robot">
+	<div class="robotFace">
+		<div class="robotEye1">
+			
+		</div>
+		<div class="robotEye2">
+			
+	</div>
+		</br>
+		<div class="robotMouth">
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

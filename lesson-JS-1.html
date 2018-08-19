@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sovann personal web</title>
+</head>
+<body onresize="resizeEvent()">
+
+<script type="text/javascript">
+	if (true) {
+		console.log("nothing is error");
+	}
+
+	if (false) {
+		console.log("hey Sovann something is error check your code");
+	}
+
+	document.body.style.background = "lightblue";
+	function show_message(msg) {
+		message_style()
+		document.getElementById("demo").innerHTML = msg;
+	}
+
+	function message_style() {
+		document.getElementById("demo").style.background = "blue";
+		document.getElementById("demo").style.border = "solid 13px red";
+		document.getElementById("demo").style.font = "";
+	}
+
+	function resizeEvent() {
+		console.log("You resize the document");
+	}
+</script>
+
+<div id="demo">
+	
+</div>
+
+<button onmouseover="show_message('hello')" onmouseout="show_message('')">Hover me!</button>
+
+</body>
+</html>

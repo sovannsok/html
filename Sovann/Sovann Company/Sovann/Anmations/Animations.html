@@ -1,0 +1,44 @@
+<style>
+     .container {
+        width: 90%;
+        height: 90%;
+        background-color: azure;
+        margin: auto;
+        margin-top: 5%;
+            }
+ 
+    .object {
+      width: 23px;
+      height: 23px;
+      background-color: coral;
+      position: relative;
+      left: 23;
+    }
+</style>
+
+<div class="container" id="container">
+    <div class="object" id="object" onclick="move()"></div>
+</div>
+<span id="tracker"></span>
+
+ 
+<script>
+    var pos = 23;
+    function animate() {
+        right_edge = document.getElementById("container").offsetWidth;
+        if (pos > right_edge) {
+            pos -= 15;
+        } else {
+            pos += 15;
+        }
+        document.getElementById("object").style.left = pos;
+        document.getElementById("tracker").innerHTML = pos;
+    }
+ 
+       
+       
+     function move() {
+        setInterval(animate, 1000);
+       
+     }
+</script>

@@ -20,32 +20,32 @@ body {
 </style>
 <body>
 
- 
-
 <div id ="container">
 <div id ="animate"></div>
 </div>
 
 <p>
-&nbsp; &nbsp; &nbsp; &nbsp;<button onclick="myMove()"> ^ </button> <br>
-<button onclick="myMove()"> < </button> &nbsp; &nbsp; &nbsp; <button onclick="myMove()"> > </button>
+&nbsp; &nbsp; &nbsp; &nbsp;<button onclick="right()"> ^ </button> <br>
+<button onclick="up()"> < </button> &nbsp; &nbsp; &nbsp; <button onclick="left()"> > </button>
 
 <script>
-function myMove() {
-  var element = document.getElementById("animate");   
-  var pos = 0;
-  var id = setInterval(frame, 50);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      element.style.top = pos + 'px'; 
-      element.style.left = pos + 'px'; 
-      element.style.right = pos + 'px'; 
+  function myMove() {
+    var element = document.getElementById("animate");   
+    var pos = 0;
+    var id = setInterval(frame, 40);
+    function frame() {
+      if (pos == 350) {
+        clearInterval(id);
+        clearInterval(id);
+        clearInterval(id);
+      } else {
+        pos++; 
+        element.style.top = pos + 'px'; 
+        element.style.left = pos + 'px'; 
+        element.style.right = pos + 'px'; 
+      }
     }
   }
-}
 </script>
 
 </body>

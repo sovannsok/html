@@ -1,0 +1,30 @@
+<html>
+	<head><title>Exercise JS-01</title>
+</head>
+<body>
+
+
+<input type="text" id="first">
+x
+<input type="text" id="second">
+=
+<button onclick="show()" id="result">
+	Show
+</button>
+
+<script type="text/javascript">
+	function show() {
+		var first = parseInt(document.getElementById('first').value);
+		var second = parseInt(document.getElementById('second').value);
+
+		for (i="1"; i <= second; i++) {
+			console.log(first + " x " + i + " = " + (first*i).slice(-2));
+		}
+				
+	}
+</script>
+
+<p id="secret"></p>
+
+</body>
+</html>

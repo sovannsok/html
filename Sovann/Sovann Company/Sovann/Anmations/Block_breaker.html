@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>Block breaker</title>
+ 
+        <style>
+            .container {
+                width: 90%;
+                height: 90%;
+                background-color: azure;
+                margin: auto;
+                margin-top: 5%;
+            }
+ 
+            .object {
+                width: 23px;
+                height: 23px;
+                background-color: coral;
+                position: relative;
+                left: 0;
+                border-radius: 50px;
+            }
+
+            .breaker {
+                margin-left: 50px;
+                width: 60px;
+                height: 20px;
+                background-color: black;
+                position: absolute;
+            }
+
+            .points {
+                background-color: #03A9F4;
+                border: solid 10px #03A9F4;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="points">
+            <button onclick="start()" style="text-decoration: none; background-color: lightblue;">
+                Start game
+            </button>
+        </h2>
+        <div>
+            </br>
+            </br>
+        </div>
+        <div class="container"></div>
+        <div class="container" id="container">
+            <div class="object" id="object"></div>
+            <div>
+
+            </div>
+            <div>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+                </br>
+            </div>
+            <div class="breaker">
+            
+            </div>
+        </div>
+        <span id="tracker"></span>
+        <span id="controller" onkeydown="moveBreaker()"></span>
+    </body> 
+ 
+    <script>
+ 
+        var h_pos = 0;          // horizontal position
+        var v_pos = 0;          // vertical position
+        var h_direction = -1;   // horizontal direction
+        var v_direction = -1;   // vertical direction
+ 
+        // get the right edge of a container
+        var right_edge = document.getElementById("container").offsetWidth;
+        // get the bottom edge of a container
+        var bottom_edge = document.getElementById("container").offsetHeight;
+ 
+        // this function control the animation an object by linearly moving it
+        // all directions such as up, down, left, right
+        function animate() {
+                if (h_pos >= right_edge-23 || h_pos <= 0 ) {
+                    h_direction *= -1;
+                }
+ 
+                if (v_pos >= bottom_edge-23 || v_pos <= 0) {
+                    v_direction *= -1;
+                }
+ 
+                h_pos += h_direction * 1;
+                v_pos += v_direction * 1;
+ 
+                move(h_pos, v_pos);
+                track(h_pos, v_pos, h_direction, v_direction);
+        }
+ 
+        // move an object base on a given position
+        function move(x, y) {
+            document.getElementById("object").style.left = x;
+            document.getElementById("object").style.top = y;
+        }
+ 
+        // track an object's position
+        function track(x, y, x_direction, y_direction) {
+            document.getElementById("tracker").innerHTML =
+                x_direction + " - " + y + " - " + y_direction + " - " + x;
+        }
+ 
+        // start the animation
+        function start() {
+            setInterval(animate, 1);    // time interval in milisecon(s)
+        }
+
+        if () {
+
+        }
+
+        function moveBreaker() {
+            if (inputContr > 100) {
+                for (var steps = 110; steps > 100; steps+=10) {
+                    moveBrRight();
+                }
+            }
+        }
+
+        function direction() {
+            function moveBrRight() {
+                for (var right=0; right<15; right++) {
+                    var rightSteps = right;
+                }       
+                document.getElementById("controller").innerHTML = style.right = rightSteps;
+            }
+
+            function moveBrLeft() {
+                for (var left=0; left<15; left++) {
+                    var leftSteps = left;
+                }       
+                document.getElementById("controller").innerHTML = style.left = leftSteps0;
+            }
+        }
+    </script>
+ 
+</html>

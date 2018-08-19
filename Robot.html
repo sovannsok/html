@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation with Javascript, HMTL and CSS</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="circle/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="circle/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="circle/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="circle/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="circle/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="circle/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="circle/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="circle/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="circle/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="circle/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="circle/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="circle/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="circle/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+ 
+        <style>
+            .container {
+                width: 90%;
+                height: 90%;
+                background-color: azure;
+                margin: auto;
+                margin-top: 5%;
+            }
+ 
+            .object {
+                width: 23px;
+                height: 23px;
+                background-color: coral;
+                position: relative;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="object" id="object" onclick="start()"></div>
+        </div>
+        <span id="tracker"></span>
+    </body>
+ 
+    <script>
+ 
+        var h_pos = 0;          // horizontal position
+        var v_pos = 0;          // vertical position
+        var h_direction = -1;   // horizontal direction
+        var v_direction = -1;   // vertical direction
+ 
+        // get the right edge of a container
+        var right_edge = document.getElementById("container").offsetWidth;
+        // get the bottom edge of a container
+        var bottom_edge = document.getElementById("container").offsetHeight;
+ 
+        // this function control the animation an object by linearly moving it
+        // all directions such as up, down, left, right
+        function animate() {
+                if (h_pos >= right_edge-23 || h_pos <= 0 ) {
+                    h_direction *= -1;
+                }
+ 
+                if (v_pos >= bottom_edge-23 || v_pos <= 0) {
+                    v_direction *= -1;
+                }
+ 
+                h_pos += h_direction * 1;
+                v_pos += v_direction * 1;
+ 
+                move(h_pos, v_pos);
+                track(h_pos, v_pos, h_direction, v_direction);
+        }
+ 
+        // move an object base on a given position
+        function move(x, y) {
+            document.getElementById("object").style.left = x;
+            document.getElementById("object").style.top = y;
+        }
+ 
+        // track an object's position
+        function track(x, y, x_direction, y_direction) {
+            document.getElementById("tracker").innerHTML =
+                x_direction + " - " + y + " - " + y_direction + " - " + x;
+        }
+ 
+        // start the animation
+        function start() {
+            setInterval(animate, 1);    // time interval in milisecon(s)
+        }
+    </script>
+ 
+</html>
