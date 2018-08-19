@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signin - webEx</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<style type="text/css">
+	.emptyUser {
+		font-weight: 50px;
+		height: 50px;
+		border-radius: 50px;
+	}
+	body {
+		background-color: lime;
+	}
+</style>
+
+<div id="webIcon" style="background-color: aqua;">
+	<div class="container-fluid" style="position: sticky;">
+	    <nav class="navbar navbar-expand-lg navbar-danger bg-warning">
+	      <div class="nav-item">
+	      	<img style="border-radius: 50px;width: 30%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Nbwaf5DQBeesiC3rG0uhwaVvEXmFw8gYQfrBzo-jnXw1y5U">
+	      </div>
+			<nav class="navbar navbar-light">
+			  <span class="navbar-brand mb-0 h1">Web</span>
+			</nav>
+	      <div class="nav-item">
+	        <a class="nav-link" href="file:///C:/Users/sovansok/Desktop/Coding/html/store/webEx.html?#">Home</a>
+	      </div>
+	      <div class="nav-item">
+	        <a class="nav-link" href="file:///C:/Users/sovansok/Desktop/Coding/html/store/Schools%20sublime%20project--web/web_contact.html">Contact</a>
+	      </div>
+	      <div class="nav-item">
+	        <a class="nav-link" href="file:///C:/Users/sovansok/Desktop/Coding/html/store/web_help.html">Help</a>
+	      </div>	
+	    </ul>
+	      <div class="nav-item">
+	        <a class="nav-link" href="file:///C:/Users/sovansok/Desktop/Coding/html/store/Schools%20sublime%20project--web/web_signin.html">Signup</a>
+	      </div>
+	      <div class="nav-item">
+	        <a class="nav-link" href="file:///C:/Users/sovansok/Desktop/Coding/html/store/Schools%20sublime%20project--web/web_login.html">Login</a>
+	      </div>
+	      <div class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+	          <i class="fas fa-bars"></i>
+	        </a>
+	        <div class="dropdown-menu">
+	          	<div class="dropdown-divider">
+	          		<a class="dropdown-item" href="#">Setting &nbsp; <i class="fas fa-cog"></i></a>
+	          	</div>
+	          	<div class="dropdown-divider">
+	          		<a class="dropdown-item" href="#">Notification &nbsp; <i class="fas fa-envelope"></i></a>
+	          	</div>
+	          	<div class="dropdown-divider"></div>
+	          		<a class="dropdown-item" href="#">Profile &nbsp; <i class="fas fa-user-circle"></i></a>
+	        	</div>
+	    	</div>
+		</nav> 
+	</div>
+</div>
+
+<div class="container-fluid mt-3">
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Signup</div>
+  <div class="card-body">
+  	<label>Firstname:</label>
+  	<input type="text" name="firstname" class="form-control form-control-sm">
+  	<label>Lastname:</label>
+  	<input type="text" name="lastname" class="form-control form-control-sm">
+  	<label>Day</label>
+	<input type="number" name="day" max="31" value="0" class="form-control form-control-sm">
+	<label>Month</label>
+	<select class="form-control form-control-sm" id="month">
+		<option>
+			Select
+		</option>
+		<script>
+			const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+			month = document.getElementById("month")
+			for (m in MONTHS) {
+				var option = document.createElement("option");
+				option.value = m;
+				option.text = MONTHS[m];
+				month.appendChild(option);
+			}
+		</script>
+<!-- 		<option>
+			Jan
+		</option>
+		<option>
+			Feb
+		</option>
+		<option>
+			Mar
+		</option>
+		<option>
+			Apr
+		</option>
+		<option>
+			May
+		</option>
+		<option>
+			Jun
+		</option>
+		<option>
+			Jul
+		</option>
+		<option>
+			Aug
+		</option>
+		<option>
+			Sep
+		</option>
+		<option>
+			Oct
+		</option>
+		<option>
+			Nov
+		</option>
+		<option>
+			Dec
+		</option> -->
+	</select>
+	<label>Year:</label>
+	<input type="number" name="Year" min="1975" value="1975" id="year" class="form-control form-control-sm">
+	<script type="text/javascript">
+		document.getElementById("year").max = (new Date()).getFullYear();
+	</script>
+  </div>
+</div>
+
+<label>Year:</label>
+
+<select class="form-control form-control-sm">
+	<option>
+		Select
+	</option>0
+	<option>
+		2000
+	</option>
+	<option>
+		2001
+	</option>
+	<option>
+		2002
+	</option>
+	<option>
+		2003
+	</option>
+	<option>
+		2004
+	</option>
+	<option>
+		2005
+	</option>
+	<option>
+		2006
+	</option>
+	<option>
+		2007
+	</option>
+	<option>
+		2008
+	</option>
+	<option>
+		2009
+	</option>
+	<option>
+		2010
+	</option>
+	<option>
+		2011
+	</option>
+	<option>
+		2012
+	</option>
+	<option>
+		2013
+	</option>
+	<option>
+		2014
+	</option>
+	<option>
+		2015
+	</option>
+	<option>
+		2016
+	</option>
+	<option>
+		2017
+	</option>
+	<option>
+		2018
+	</option>
+	<option>
+		2019
+	</option>
+</select>
+
+<label>Gender:</label>
+
+<select class="form-control form-control-sm">
+	<option>Select</option>
+	<option>Boy</option>
+	<option>Girl</option>
+</select>
+
+
+
+<input type="submit" value="Submit">
+
+</div>
+
+
+
+</body>
+</html>
