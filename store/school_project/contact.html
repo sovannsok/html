@@ -6,8 +6,8 @@
 </head>
 <body style="background: lime;">
 
-<div id="webIcon" style="background-color: aqua;">
-	<div class="container-fluid" style="position: sticky;">
+<div id="webIcon" style="background-color: aqua; position: sticky;">
+	<div class="container-fluid">
 	    <nav class="navbar navbar-expand-lg navbar-danger bg-warning">
 	      <div class="nav-item">
 	      	<img style="border-radius: 50px;width: 30%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Nbwaf5DQBeesiC3rG0uhwaVvEXmFw8gYQfrBzo-jnXw1y5U">
@@ -50,40 +50,58 @@
 	</div>  
 </div>
 
-<table>
-	<tr>
-		<td><h1>Contact</h1></td>
-	</tr>
-	<tr>
-		<td><h3>Phone: _______</h3></td>
-	</tr>
-	<tr>
-		<td><h3>Created in __/__/____</h3></td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td><img src="https://avatars2.githubusercontent.com/u/38154594?s=460&v=4" alt="Sovannsok" style="border-radius: 50px; width: 50px; height: 50px;"></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-	</tr>
-</table>
+<div class="container-fluid">
+		  	<div class="card-body">
+				<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+				  <div class="card-header">Contact</div>
+					  <div class="card-body">
+						<label>Firstname:</label>
 
+						<input type="text" id="firstname" class="form-control form-control-sm" placeholder="firstname">
 
+						<label>Lastname:</label>
 
+						<input type="text" name="lastname" class="form-control form-control-sm" placeholder="lastname">
 
+						<label>Year:</label>
+						<input type="number" name="Year" min="1975" value="1975" id="year" class="form-control form-control-sm">
+						<script type="text/javascript">
+							document.getElementById("year").max = (new Date()).getFullYear();
+						</script>
+						<label>Month</label>
+						<select class="form-control form-control-sm" id="month">
+							<option>
+								Select
+							</option>
+							<script>
+								const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+								month = document.getElementById("month")
+								for (m in MONTHS) {
+									var option = document.createElement("option");
+									option.value = m;
+									option.text = MONTHS[m];
+									month.appendChild(option);
+								}
+							</script>
+					 	</select>
+					 	<label>Day</label>
+						<input type="number" name="day" max="31" min="0" value="0" class="form-control form-control-sm">
+						<label>Gender:</label></br>
+						<span><input type="radio" name="boy">Boy</span></br>
+						<span><input type="radio" name="girl"">Girl</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-
-<!-- Alfed sq -->
-https://p360images.realestateview.com.au/pocket-map/listing/2113308/882693
-<!-- end -->
-
-<!-- sovann -->
-
-
+<style>
+	.form-sm  {
+		width: 30%;
+		height: 20px;
+	}
+</style>
 
 </body>
 </html>
