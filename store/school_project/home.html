@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../fontawesome/css/all.css">
 	<link rel="stylesheet" href="./project.css">
 </head>
-<body style="background-image: url('./background.jpg');">
+<body style="background-image: url('./background.jpg'); background-repeat: no-repeat;">
 
 <div id="webIcon" style="background-color: aqua;">
 	<div class="container-fluid" style="position: sticky;">
@@ -57,15 +57,16 @@
 <style type="text/css">
 	.box {
 		display: inline-block;
-		width: 36px;
-		height: 48px;
+		width: 72px;
+		height: 72px;
 		border: solid #ccc 2px;
 		background-color: orange;
 		margin: auto;
-		line-height: 48px;
-		font-size: 27px;
+		line-height: 72px;
+		font-size: 36px;
 		color: white;
 		box-shadow: 0 3px 3px white;
+		border-radius: 50%;
 	}
 
 	.box-to {
@@ -96,11 +97,13 @@
 
 	.box-info {
 		border: dotted red 3px;
-		background-color: #F0F7F6;
-		width: 70px;
-		height: 70px;
-		line-height: 70px;
-		text-shadow: 0 3px 2px white; 
+		width: 60%;
+		text-shadow: 0 5px 5px grey;
+		border-radius: 12px;
+		color: white;
+		box-shadow: 0 5px 5px white;
+		line-height: 27px;
+		padding: 12px;
 	}
 </style>
 
@@ -168,8 +171,8 @@
 			</table>
 		</div>
 		<div class="text-center mt-5">
-			<div class="box-to mr-5">T</div>
-			<div class="box-to">O</div>
+			<div class="box-to mr-5" style="border-radius: 12px 0px 12px 0px;">T</div>
+			<div class="box-to" style="border-radius: 0px 12px 0px 12px;">O</div>
 		</div>
 		<div class="text-center mt-5">
 			<div class="box-title mr-3">H</div>
@@ -186,8 +189,8 @@
 			<div class="box-title mr-3">L</div>
 			<div class="box-title mr-3">P</div>
 		</div>
-		<div class="row mt-5 box-info text-center mr-5 ml-5">
-			<div class="col">Do you need any help with your homework? Do you need tutor to help you with your school project? Would you like to get more help? Then go to the  help on the top-menu on the <b><u>Navigation.</u></b></div>
+		<div class="box-info text-center mt-5 mx-auto">
+			Do you need any help with your homework? Do you need a tutor to help you with your school project? Would you like to get more help? Then go to the support on the top menu on the Navigation.
 		</div>
 	</div>
 
