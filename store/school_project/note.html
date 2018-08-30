@@ -88,7 +88,7 @@
 				<tr>
 					<td width="30%">
 						&nbsp;
-					</td>					
+					</td>
 					<td>
 						&nbsp;
 					</td>
@@ -114,16 +114,17 @@
 				</tr>
 			</table>
 		</div>
-		</div>
-		<div class="row">
-			<div class="col-4">
-				<textarea rows="20" style="background-color: black; width: 100%; color: white;" placeholder="type something">TYPE THE FIRST NOTE HERE...</textarea>
-			</div>
-			<div class="col-4">
-				<textarea rows="20" style="background-color: black; width: 100%; color: white;" placeholder="type something">TYPE THE SECOND NOTE HERE...</textarea>
-			</div>
-			<div class="col-4">
-				<textarea rows="20" style="background-color: black; width: 100%; color: white;" placeholder="type something">TYPE THE THIRD NOTE HERE...</textarea>
+		<div>	
+			<div class="row">
+				<div class="col-4">
+					<textarea rows="20" class="form-control form-control-sm" placeholder="type something">Type your first note here...</textarea>
+				</div>
+				<div class="col-4">
+					<textarea rows="20" class="form-control form-control-sm" placeholder="type something">Type your second note here...</textarea>
+				</div>
+				<div class="col-4">
+					<textarea rows="20" class="form-control form-control-sm" placeholder="type something">Type your third note here..</textarea>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -131,17 +132,26 @@
 
 <style type="text/css">
 	.box {
-		display: inline-block;
-		width: 72px;
-		height: 72px;
+		font-family: "Brush script MT";
 		border: solid #ccc 2px;
-		background-color: orange;
+		display: inline-block;
+		width: 62px;
+		height: 62px;
+		background-color: #154360;
 		margin: auto;
-		line-height: 72px;
+		text-align: center;
+		line-height: 62px;
 		font-size: 36px;
 		color: white;
-		box-shadow: 0 3px 3px white;
 		border-radius: 50%;
+		box-shadow: 0 7px 7px white;
+	}
+
+	textarea.form-control {
+		background-color: #FAD7A0; 
+		width: 100%; 
+		color: #154360;
+		font-family: "Gill Sans";
 	}
 </style>
 

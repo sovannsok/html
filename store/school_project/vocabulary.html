@@ -53,13 +53,8 @@
 	</div>
 </div>
 
-<h1>Word list</h1>
-
-<div>
-	&nbsp;
-</div>
-
 <div class="container-fluid">
+	<h1 id="title" onclick="stopColor()">Word list</h1>
 	<table class="table-stripe table-bordered table-dark">
 		<tr>
 			<th>Monday&nbsp;</th>
@@ -71,10 +66,47 @@
 			<th>Sunday</th>
 		</tr>
 		<tr>
-			<td>defence</td>
+			<td></td>
 		</tr>
 	</table>
 </div>
+
+<script type="text/javascript">
+	var myVar = setInterval(randomizeColor, 230);
+	var colors = [
+					"#EBF5FB", "#D6EAF8", "#AED6F1", "#AED6F1", "#85C1E9", "#5DADE2", 
+					"#3498DB", "#2E86C1", "#2874A6", "#1F618D", "#21618C", "#1B4F72", 
+					"#1B4F72", "#21618C", "#1F618D", "#2874A6", "#2E86C1", "#3498DB", 
+					"#5DADE2", "#85C1E9", "#AED6F1", "#AED6F1", "#D6EAF8", "#EBF5FB"
+				];
+
+	var randomColors = [
+						"#CD6155", "#CD6155", "#AF7AC5", "#A569BD", "#5499C7", "#5DADE2",
+					    "#48C9B0", "#45B39D", "#45B39D", "#F4D03F", "#F5B041", "#F5B041",
+					    "#F5B041", "#EB984E", "#DC7633", "#F0F3F4", "#CACFD2", "#AAB7B8",
+					    "#99A3A4", "#5D6D7E", "#566573", "#641E16", "#78281F", "#512E5F",
+					    "#4A235A", "#154360", "#1B4F72", "#0E6251", "#0B5345", "#145A32",
+					    "#186A3B", "#7D6608", "#7B7D7D", "#626567", "#4D5656", "#424949",
+					    "#1B2631", "#17202A"
+					   ]; 
+	var i = 0;
+	function setColor() {
+	    var x = document.getElementById("title");
+	    x.style.color = colors[i++];
+	    if (i==colors.length) {
+	    	i=0;
+	    }
+	}
+
+	function randomizeColor() {
+		var x = document.getElementById("title");
+		x.style.color = randomColors[Math.floor(Math.random()*randomColors.length)];
+	}
+
+	function stopColor() {
+	    clearInterval(myVar);
+	}
+</script>
 
 </body>
 </html>
