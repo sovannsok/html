@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<input type="text" id="firstText">
+<input type="text" id="sign">
+<input type="text" id="secondText">
+<button onclick="answer()">
+=
+</button>
+<label id="answer">
+	
+</label>
+
+<script type="text/javascript">
+	var sign = document.getElementById("sign").value;
+	function answer() {
+		if (sign = "+") {
+			document.getElementById("answer").innerHTML = parseInt(document.getElementById("firstText").value) + parseInt(document.getElementById("secondText").value);
+		}
+		if (sign = "-") {
+			document.getElementById("answer").innerHTML = parseInt(document.getElementById("firstText").value) - parseInt(document.getElementById("secondText").value);
+		}
+		if (sign = "x") {
+			document.getElementById("answer").innerHTML = parseInt(document.getElementById("firstText").value) * parseInt(document.getElementById("secondText").value);
+		}
+		if (sign = "/") {
+			if (document.getElementById("secondText").value == 0) {
+				document.getElementById("answer").innerHTML = "error";
+			} else {
+				document.getElementById("answer").innerHTML = parseInt(document.getElementById("firstText").value) / parseInt(document.getElementById("secondText").value);
+			}
+		}
+	}
+</script>
+
+</body>
+</html>
