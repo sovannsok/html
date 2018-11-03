@@ -7,18 +7,6 @@
 <body>
 	
 <div id="firstRow">
-	<input type="text" id="firstText">
-	<input type="text" id="sign">
-	<input type="text" id="secondText">
-	<button onclick="answer()">
-	=
-	</button>
-	<label id="answer">
-	
-	</label>
-</div>
-
-<div id="secondRow">
 	<input type="text" id="firstText1">
 	<input type="text" id="sign1">
 	<input type="text" id="secondText1">
@@ -30,49 +18,165 @@
 	</label>
 </div>
 
-<script type="text/javascript">
-	function answer() {
-		var first = parseInt(document.getElementById("firstText").value);
-		var second = parseInt(document.getElementById("secondText").value);
-		var sign = document.getElementById("sign").value;
+<div id="secondRow">
+	<input type="text" id="firstText2">
+	<input type="text" id="sign2">
+	<input type="text" id="secondText2">
+	<button onclick="answer2()">
+	=
+	</button>
+	<label id="answer2">
+	
+	</label>
+</div>
 
-		if (sign == "+") {
-			document.getElementById("answer").innerHTML = first + second;
+<div id="thirdRow">
+	<input type="text" id="firstText3">
+	<input type="text" id="sign3">
+	<input type="text" id="secondText3">
+	<button onclick="answer3()">
+	=
+	</button>
+	<label id="answer3">
+	
+	</label>
+</div>
+
+<div id="fourthRow">
+	<input type="text" id="firstText4">
+	<input type="text" id="sign4">
+	<input type="text" id="secondText4">
+	<button onclick="answer4()">
+	=
+	</button>
+	<label id="answer4">
+	
+	</label>
+</div>
+
+<div id="fiftRow">
+	<input type="text" id="firstText5">
+	<input type="text" id="sign5">
+	<input type="text" id="secondText5">
+	<button onclick="answer5()">
+	=
+	</button>
+	<label id="answer5">
+	
+	</label>
+</div>
+
+<script type="text/javascript">
+	function answer1() {
+		var first1 = parseInt(document.getElementById("firstText1").value);
+		var second1 = parseInt(document.getElementById("secondText1").value);
+		var sign1 = document.getElementById("sign1").value;
+
+		if (sign1 == "+") {
+			document.getElementById("answer1").innerHTML = first1 + second1;
 		}
-		if (sign == "-") {
-			document.getElementById("answer").innerHTML = first - second;
+		if (sign1 == "-") {
+			document.getElementById("answer1").innerHTML = first1 - second1;
 		}
-		if (sign == "x") {
-			document.getElementById("answer").innerHTML = first * second;
+		if (sign1 == "x") {
+			document.getElementById("answer1").innerHTML = first1 * second1;
 		}
-		if (sign == "/") {
-			if (second == 0) {
-				document.getElementById("answer").innerHTML = "error";
+		if (sign1 == "/") {
+			if (second1 == 0) {
+				document.getElementById("answer1").innerHTML = "error";
 			} else {
-				document.getElementById("answer").innerHTML = first / second;
+				document.getElementById("answer1").innerHTML = first1 / second1;
 			}
 		}
 	}
 
-    function answer1() {
-    	var first1 = parseInt(document.getElementById("firstText1").value);
-    	var second1 = parseInt(document.getElementById("secondText1").value);
-    var sign1 = document.getElementById("sign1").value;
+    function answer2() {
+    	var first2 = parseInt(document.getElementById("firstText2").value);
+    	var second2 = parseInt(document.getElementById("secondText2").value);
+    	var sign2 = document.getElementById("sign2").value;
 
-    	if (sign1 == "+") {
-    		document.getElementById("answer1").innerHTML = first1 + second1;
+    	if (sign2 == "+") {
+    		document.getElementById("answer2").innerHTML = first2 + second2;
     	}
-    	if (sign1 == "-") {
-    		document.getElementById("answer1").innerHTML = first1 - second1;
+    	if (sign2 == "-") {
+    		document.getElementById("answer2").innerHTML = first2 - second2;
     	}
-    	if (sign1 == "*") {
-    		document.getElementById("answer1").innerHTML = first1 * second1;
+    	if (sign2 == "*") {
+    		document.getElementById("answer2").innerHTML = first2 * second2;
     	}
-    	if (sign1 == "/") {
-    		if (second1 == 0) { 
+    	if (sign2 == "/") {
+    		if (second2 == 0) { 
+    			document.getElementById("answer2").innerHTML = "error";
+    		} else {
+    			document.getElementById("answer2").innerHTML = first2 / second2;
+    		}
+    	}
+    }
+    function answer3() {
+    	var first3 = parseInt(document.getElementById("firstText3").value);
+    	var second3 = parseInt(document.getElementById("secondText3").value);
+    	var sign3 = document.getElementById("sign3").value;
+
+    	if (sign3 == "+") {
+    		document.getElementById("answer3").innerHTML = first3 + second3;
+    	}
+    	if (sign3 == "-") {
+    		document.getElementById("answer3").innerHTML = first3 - second3;
+    	}
+    	if (sign3 == "*") {
+    		document.getElementById("answer3").innerHTML = first3 * second3;
+    	}
+    	if (sign3 == "/") {
+    		if (second3 == 0) { 
     			document.getElementById("answer1").innerHTML = "error";
     		} else {
-    			document.getElementById("answer1").innerHTML = first1 / second1;
+    			document.getElementById("answer1").innerHTML = first3 / second3;
+    		}
+    	}
+    }
+
+    function answer4() {
+    	var first4 = parseInt(document.getElementById("firstText1").value);
+    	var second4 = parseInt(document.getElementById("secondText1").value);
+    	var sign4 = document.getElementById("sign4").value;
+
+    	if (sign4 == "+") {
+    		document.getElementById("answer4").innerHTML = first4 + second4;
+    	}
+    	if (sign4 == "-") {
+    		document.getElementById("answer4").innerHTML = first4 - second4;
+    	}
+    	if (sign4 == "*") {
+    		document.getElementById("answer4").innerHTML = first4 * second4;
+    	}
+    	if (sign4 == "/") {
+    		if (second4 == 0) { 
+    			document.getElementById("answer1").innerHTML = "error";
+    		} else {
+    			document.getElementById("answer1").innerHTML = first4 / second4;
+    		}
+    	}
+    }
+
+    function answer5() {
+    	var first5 = parseInt(document.getElementById("firstText5").value);
+    	var second5 = parseInt(document.getElementById("secondText5").value);
+    	var sign5 = document.getElementById("sign5").value;
+
+    	if (sign5 == "+") {
+    		document.getElementById("answer5").innerHTML = first5 + second5;
+    	}
+    	if (sign5 == "-") {
+    		document.getElementById("answer5").innerHTML = first5 - second5;
+    	}
+    	if (sign5 == "*") {
+    		document.getElementById("answer5").innerHTML = first5 * second5;
+    	}
+    	if (sign5 == "/") {
+    		if (second5 == 0) { 
+    			document.getElementById("answer5").innerHTML = "error";
+    		} else {
+    			document.getElementById("answer5").innerHTML = first5 / second5;
     		}
     	}
     }
