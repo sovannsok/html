@@ -6,32 +6,46 @@
 </head>
 <body>
 	
-<input type="text" id="firstText">
-<input type="text" id="sign">
-<input type="text" id="secondText">
-<button onclick="answer()">
-=
-</button>
-<label id="answer">
+<div id="firstRow">
+	<input type="text" id="firstText">
+	<input type="text" id="sign">
+	<input type="text" id="secondText">
+	<button onclick="answer()">
+	=
+	</button>
+	<label id="answer">
 	
-</label>
+	</label>
+</div>
+
+<div id="secondRow">
+	<input type="text" id="firstText1">
+	<input type="text" id="sign1">
+	<input type="text" id="secondText1">
+	<button onclick="answer1()">
+	=
+	</button>
+	<label id="answer1">
+	
+	</label>
+</div>
 
 <script type="text/javascript">
-	var sign = document.getElementById("sign").value;
 	function answer() {
 		var first = parseInt(document.getElementById("firstText").value);
 		var second = parseInt(document.getElementById("secondText").value);
+		var sign = document.getElementById("sign").value;
 
-		if (sign = "+") {
+		if (sign == "+") {
 			document.getElementById("answer").innerHTML = first + second;
 		}
-		if (sign = "-") {
+		if (sign == "-") {
 			document.getElementById("answer").innerHTML = first - second;
 		}
-		if (sign = "x") {
+		if (sign == "x") {
 			document.getElementById("answer").innerHTML = first * second;
 		}
-		if (sign = "/") {
+		if (sign == "/") {
 			if (second == 0) {
 				document.getElementById("answer").innerHTML = "error";
 			} else {
@@ -39,6 +53,29 @@
 			}
 		}
 	}
+
+    function answer1() {
+    	var first1 = parseInt(document.getElementById("firstText1").value);
+    	var second1 = parseInt(document.getElementById("secondText1").value);
+    var sign1 = document.getElementById("sign1").value;
+
+    	if (sign1 == "+") {
+    		document.getElementById("answer1").innerHTML = first1 + second1;
+    	}
+    	if (sign1 == "-") {
+    		document.getElementById("answer1").innerHTML = first1 - second1;
+    	}
+    	if (sign1 == "*") {
+    		document.getElementById("answer1").innerHTML = first1 * second1;
+    	}
+    	if (sign1 == "/") {
+    		if (second1 == 0) { 
+    			document.getElementById("answer1").innerHTML = "error";
+    		} else {
+    			document.getElementById("answer1").innerHTML = first1 / second1;
+    		}
+    	}
+    }
 </script>
 
 </body>
