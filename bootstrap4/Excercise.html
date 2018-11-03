@@ -67,10 +67,7 @@
 </div>
 
 <script type="text/javascript">
-	function answer1() {
-		var first = parseInt(document.getElementById("firstText1").value);
-		var second = parseInt(document.getElementById("secondText1").value);
-		var sign = document.getElementById("sign1").value;
+	function calculate(first, second, sign) {
 		var result = 0;
 
 		if (sign == "+") {
@@ -90,32 +87,23 @@
 			}
 		}
 
-		document.getElementById("answer1").innerHTML = result;
+		return result;
+	}
+
+	function answer1() {
+		var first = parseInt(document.getElementById("firstText1").value);
+		var second = parseInt(document.getElementById("secondText1").value);
+		var sign = document.getElementById("sign1").value;
+
+		document.getElementById("answer1").innerHTML = calculate(first, second, sign);
 	}
 
     function answer2() {
     	var first = parseInt(document.getElementById("firstText2").value);
     	var second = parseInt(document.getElementById("secondText2").value);
     	var sign = document.getElementById("sign2").value;
-    	var result = 0;
 
-    	if (sign == "+") {
-    		result = first + second;
-    	}
-    	if (sign == "-") {
-    		result = first - second;
-    	}
-    	if (sign == "x") {
-    		result = first * second;
-    	}
-    	if (sign == "/") {
-    		if (second == 0) { 
-    			result = "error";
-    		} else {
-    			result = first / second;
-    		}
-    	}
-    	document.getElementById("answer2").innerHTML = result;
+    	document.getElementById("answer2").innerHTML = calculate(first, second, sign);
     }
     function answer3() {
     	var first = parseInt(document.getElementById("firstText3").value);
@@ -123,23 +111,7 @@
     	var sign = document.getElementById("sign3").value;
     	var result = 0;
 
-    	if (sign == "+") {
-    		result = first + second;
-    	}
-    	if (sign == "-") {
-    		result = first - second;
-    	}
-    	if (sign == "x") {
-    		result = first * second;
-    	}
-    	if (sign == "/") {
-    		if (second == 0) { 
-    			result = "error";
-    		} else {
-    			result = first / second;
-    		}
-    	}
-    	document.getElementById("answer3").innerHTML = result;
+    	document.getElementById("answer3").innerHTML = calculate(first, second, sign);
     }
 
     function answer4() {
@@ -148,23 +120,7 @@
     	var sign = document.getElementById("sign4").value;
     	var result = 0;
 
-    	if (sign == "+") {
-    		result = first + second;
-    	}
-    	if (sign == "-") {
-    		result = first - second;
-    	}
-    	if (sign == "x") {
-    		result = first * second;
-    	}
-    	if (sign == "/") {
-    		if (second == 0) { 
-    			result = "error";
-    		} else {
-    			result = first / second;
-    		}
-    	}
-    	document.getElementById("answer4").innerHTML = result;
+    	document.getElementById("answer4").innerHTML = calculate(first, second, sign) ;
     }
 
     function answer5() {
@@ -173,23 +129,7 @@
     	var sign = document.getElementById("sign5").value;
     	var result = 0;
 
-    	if (sign == "+") {
-    		result = first + second;
-    	}
-    	if (sign == "-") {
-    		result = first - second;
-    	}
-    	if (sign == "x") {
-    		result = first * second;
-    	}
-    	if (sign == "/") {
-    		if (second == 0) { 
-    			result = "error";
-    		} else {
-    			result = first / second;
-    		}
-    	}
-    	document.getElementById("answer5").innerHTML = result;
+    	document.getElementById("answer5").innerHTML = calculate(first, second, sign);
     }
 </script>
 
