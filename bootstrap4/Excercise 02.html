@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+<style type="text/css">
+	body {
+		background-color: lightgreen;
+	}
+
+	.answer1 {
+		border: solid 5px red;
+		background: lightblue;
+		width: 80px;
+		border-radius: 45px;
+		font-style: bold;
+		margin-bottom: 5px;
+	}
+
+	.answer2 {
+		border: solid 5px red;
+		background: lightblue;
+		width: 80px;
+		border-radius: 45px;
+		font-style: bold;
+		margin-bottom: 5px;
+	}
+
+	.answer3 {
+		border: solid 5px red;
+		background: lightblue;
+		width: 80px;
+		border-radius: 45px;
+		font-style: bold;
+		margin-bottom: 5px;
+	}
+
+	.answer4 {
+		border: solid 5px red;
+		background: lightblue;
+		width: 80px;
+		border-radius: 45px;
+		font-style: bold;
+		margin-bottom: 29px;
+	}
+</style>
+
+<div id="output" class="output">
+	
+</div>
+
+<input type="text" id="firstText">
+<input type="text"  id="sign">
+<input type="text" id="secondText">
+<button onclick="append()">Submit</button>
+
+<script>
+	var first = parseInt(document.getElementById("firstText").value);
+	var second = parseInt(document.getElementById("secondText").value);
+	var sign = document.getElementById("sign").value;
+	var result = 0;
+
+	function append() {
+		var label = document.createElement("label");
+		label.innerHTML = parseInt(document.getElementById("firstText").value)
+		 + " " + document.getElementById("sign").value + " " + 
+		parseInt(document.getElementById("secondText").value) + " = " + calculate(first, second, sign);
+		var br = document.createElement("br");
+
+		document.getElementById("output").appendChild(label);
+		document.getElementById("output").appendChild(br);
+	}
+
+	function calculate(first, second, sign) {
+		var first = parseInt(document.getElementById("firstText").value);
+		var second = parseInt(document.getElementById("secondText").value);
+		var sign = document.getElementById("sign").value;
+		var result = 0;
+
+		if (sign == "+") {
+			result = first + second;
+		}
+		if (sign == "-") {
+			result = first - second;
+		}
+		if (sign == "x") {
+			result = first * second;
+		}
+		if (sign == "/") {
+			if (first == 0) {
+				result = "error";
+			} else {
+				result = first / second;
+			}
+		}
+
+		return result;
+		}
+</script>
+
+</body>
+</html>
