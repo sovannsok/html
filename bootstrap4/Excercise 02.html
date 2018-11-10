@@ -58,16 +58,19 @@
 <button onclick="append()">Submit</button>
 
 <script>
-	var first = parseInt(document.getElementById("firstText").value);
-	var second = parseInt(document.getElementById("secondText").value);
-	var sign = document.getElementById("sign").value;
-	var result = 0;
-
+	
 	function append() {
+		var first = parseFloat(document.getElementById("firstText").value);
+		var second = parseFloat(document.getElementById("secondText").value);
+		var sign = document.getElementById("sign").value;
+		
 		var label = document.createElement("label");
-		label.innerHTML = parseInt(document.getElementById("firstText").value)
-		 + " " + document.getElementById("sign").value + " " + 
-		parseInt(document.getElementById("secondText").value) + " = " + calculate(first, second, sign);
+
+		label.innerHTML = first + " " + 
+						  sign + " " + 
+						  second + " = " + 
+						  calculate(first, second, sign);
+
 		var br = document.createElement("br");
 
 		document.getElementById("output").appendChild(label);
@@ -75,22 +78,16 @@
 	}
 
 	function calculate(first, second, sign) {
-		var first = parseInt(document.getElementById("firstText").value);
-		var second = parseInt(document.getElementById("secondText").value);
-		var sign = document.getElementById("sign").value;
 		var result = 0;
 
 		if (sign == "+") {
 			result = first + second;
-		}
-		if (sign == "-") {
+		} else if (sign == "-") {
 			result = first - second;
-		}
-		if (sign == "x") {
+		} else if (sign == "x") {
 			result = first * second;
-		}
-		if (sign == "/") {
-			if (first == 0) {
+		} else if (sign == "/") {
+			if (second == 0) {
 				result = "error";
 			} else {
 				result = first / second;
@@ -98,7 +95,7 @@
 		}
 
 		return result;
-		}
+	}
 </script>
 
 </body>
