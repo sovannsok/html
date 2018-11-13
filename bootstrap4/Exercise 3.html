@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<style type="text/css">
+	body {
+		background-color: lightgreen;
+	}
+
+	.answer {
+		border: solid 5px red;
+		background: blue;
+		margin-bottom: 5px;
+		font-size: 20px;
+		color: white;
+		box-shadow: 10px 10px 5px #ECF0F1;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+</style>
+
+<div id="output" class="output">
+
+</div>
+
+<input type="text" id="text" onchange="append()">
+
+<script>
+	
+	function control(id) {
+		return document.getElementById(id).value;
+	}
+
+	function append() {
+		var text = control("text");
+		var label = document.createElement("label");
+
+		label.innerHTML = text;
+
+		var br = document.createElement("br");
+		document.getElementById("output").appendChild(label).style.border = "solid 5px red";
+		document.getElementById("output").appendChild(br);
+	}
+
+	function result(text) {
+		var result = 0;
+	}
+</script>
+
+</body>
+</html>

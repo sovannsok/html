@@ -59,9 +59,13 @@
 
 <script>
 	
+	function control(id) {
+		return document.getElementById(id).value;
+	}
+
 	function append() {
-		var first = parseFloat(document.getElementById("firstText").value);
-		var second = parseFloat(document.getElementById("secondText").value);
+		var first = parseFloat(control("firstText"));
+		var second = parseFloat(control("secondText"));
 		var sign = document.getElementById("sign").value;
 		
 		var label = document.createElement("label");
