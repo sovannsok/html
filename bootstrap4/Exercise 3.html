@@ -14,11 +14,10 @@
 	.answer {
 		border: solid 5px red;
 		background: blue;
-		margin-bottom: 5px;
 		font-size: 20px;
 		color: white;
 		box-shadow: 10px 10px 5px #ECF0F1;
-		margin-bottom: 20px;
+		margin: 20px 20px;
 		text-align: center;
 	}
 </style>
@@ -27,7 +26,7 @@
 
 </div>
 
-<input type="text" id="text" onchange="append()">
+<input type="text" id="text" onkeyup="append()">
 
 <script>
 	
@@ -41,9 +40,7 @@
 		label.style.color = "white";
 		label.style.background = "blue";
 		label.style.border = "solid 5px red";
-		label.innerHTML = text;
-
-		var br = document.createElement("br");
+		label.innerHTML = text.charAt(text.length-1);
 		document.getElementById("output").appendChild(label);
 	}
 
