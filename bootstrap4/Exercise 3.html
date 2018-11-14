@@ -38,12 +38,13 @@
 	function append() {
 		var text = control("text");
 		var label = document.createElement("label");
-
+		label.style.color = "white";
+		label.style.background = "blue";
+		label.style.border = "solid 5px red";
 		label.innerHTML = text;
 
 		var br = document.createElement("br");
-		document.getElementById("output").appendChild(label).style.border = "solid 5px red";
-		document.getElementById("output").appendChild(br);
+		document.getElementById("output").appendChild(label);
 	}
 
 	function result(text) {
