@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bootstrap4</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#section1">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section2">Signup</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section3">List</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Section 4
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#section41">Link 1</a>
+        <a class="dropdown-item" href="#section42">Link 2</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div id="section1" class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
+	<h1>Home</h1>
+	
+</div>
+<div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
+    <h1>Form</h1>
+    <label>Firstname:</label><input type="text" class="form-control form-control-lg" required>
+    <label>Lastname:</label><input type="text" class="form-control form-control-lg" required>
+    <label>Email:</label><input type="text" class="form-control form-control-lg" required>
+    <label>Password:</label><input type="text" class="form-control form-control-lg" required>
+    <label>Year:</label>
+    <select class="form-control form-control-lg">
+    	<option>2000</option>
+    	<option>2001</option>
+    	<option>2002</option>
+    	<option>2003</option>
+    	<option>2004</option>
+    	<option>2005</option>
+    	<option>2006</option>
+    	<option>2007</option>
+    	<option>2008</option>
+    	<option>2009</option>
+    	<option>2010</option>
+    	<option>2011</option>
+    	<option>2012</option>
+    	<option>2013</option>
+    	<option>2014</option>
+    	<option>2015</option>
+    	<option>2016</option>
+    	<option>2017</option>
+    	<option>2018</option>
+    </select></br>
+    <label>Month:</label>
+	<select class="form-control form-control-lg">
+		<option>Jan</option>
+		<option>Feb</option>
+		<option>March</option>
+		<option>April</option>
+		<option>May</option>
+		<option>June</option>
+	</select></br>
+  <label>Day</label>
+  <select class="form-control form-control-lg">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+		<option>20</option>
+		<option>21</option>
+		<option>22</option>
+		<option>23</option>
+		<option>24</option>
+		<option>25</option>
+		<option>26</option>
+		<option>27</option>
+		<option>28</option>
+		<option>29</option>
+		<option>30</option>
+		<option>31</option>
+   </select>
+</div>
+<div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+	<h1>List</h1>
+	<table class="table table-dark w-100">
+		<tr>
+			<th>Id:</th>
+			<th>Code:</th>
+			<th>Info:</th>
+		</tr>
+		<tr>
+			<td>#1</td>
+			<td>5642</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>#2</td>
+			<td>3182</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>#3</td>
+			<td>6982</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>0695</td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+<div id="section41" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 4 Submenu 1</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+<div id="section42" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+  <h1>Section 4 Submenu 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+</body>
+</html>

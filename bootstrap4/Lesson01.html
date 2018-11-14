@@ -10,7 +10,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
-<body onload="for (var i=1; i<20; i++) {console.log('1' + '+' + i + '=' + parseTnt(1+i))}">
+<body>
 
 	<style>
 		#icon {
@@ -23,289 +23,788 @@
 	</script>
 
    <div class="container-fluid">
+		<div id="icon" class="img-sm">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+				<ul class="navbar nav">
+				    <li class="nav-item active navbar-brand">
+				      <a class="nav-link" href="#"><i class="fas fa-bars"></i></a>
+				    </li>
+				</ul>
+			</nav>
+		</div>
 		<div id="document">
-				<div id="icon" class="img-sm">
-					<a href="file:///C:/Users/sovansok/Desktop/Coding/html/bootstrap4/Lesson01.html">
-						<img style="width: 90px; border-radius: 50px; height: 90px;" src="data:image/png;base64,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">
-					</a>
-					<a href="">
-						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9qGbmsQypfFF_GRMlgdv4TllF3WJb-b4cz0mAxCgLNMeAOLL0Ww" style="border-radius: 50px; width: 70px; height: 70px;">
-					</a>
-					<a href="../home">
-						Home
-					</a>
-				</div>
-				<div id="bootstrap_examples" class="container-fluid">
-					<div style="background-color: #D7DBDD;">
-						<div>
-							<h1>
-								Example
-							</h1>
-						</div>
-						<div>
-							
-						</div>
+					<h1><span class="text-danger">The</span><span class="text-warning"> bootstrap 4</span> <span class="text-info">color</span> <span class="text-primary">chart:</span></h1>
+					<table class="table table table-dark">      
+					  <tr>
+					    <td><h1 class="text-danger">Danger <small>#C0392B</small></h1></td>
+					  </tr>
+					  <tr>
+					    <td><h2 class="text-warning">Warning <small>#F1C40F</small></h2></td>
+					  </tr>
+					  <tr>
+					    <td class="text-info"><h3>Info <small>#3498DB</small></h3></td>
+					  </tr>
+					  <tr>
+					   <td class="text-primary"><h4>Primary <small>#2471A3</small></h4></td>
+					  </tr>
+					  <tr>
+					    <td class="text-secondary"><h5>Secondary <small>#808B96</small></h5></td>
+					  </tr>
+					  <tr>
+					    <td class="text-success"><h6>Success <small>#229954</small></h6></td>
+					  </tr>
+					</table>
+					<div>
+						<p>
+							<dl>
+								<code><button style="background-color: lightblue;" class="text-danger">Danger</button></code>
+								<code><button style="background-color: lightblue;" class="text-warning">Warning</button></code>
+								<code><button style="background-color: lightblue;" class="text-info">Info</button></code>
+								<code><button style="background-color: lightblue;" class="text-primary">Primary</button></code>
+								<code><button style="background-color: lightblue;" class="text-secondary">Secondary</button></code>
+							</dl>
+						</p>
+					</div>
+					<div>
+						<h1>Example:</h1>
+						<p>The admin-commands are:-</br>
+							<kbd>alt + f4</kbd></br>
+							<kbd>alt + f8</kbd></br>
+							<kbd><i class="fab fa-windows"></i> + G</kbd>
+						</p>
+					</div>
+					<div>
+						<h1>Javascript code:</h1>
+						<kbd>
+							for (var name = 5; name < 10; name++) { </br>
+							&nbsp; document.write("Good Job!");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <br>
+							}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</kbd>
+					</div>
+					<div>
+						<pre>
+							This is a pre tag
+						</pre>
+					</div>
+					<kbd class="font-itallic">
+						alert("text");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
+						window.confirm("text");
+					</kbd>
+					<div class="diplay-1">
+						DISPLAY 1
+					</div>
+					<div class="diplay-2">
+						DISPLAY 2
+					</div>
+					<div class="diplay-3">
+						DISPLAY 3
+					</div>
+					<div class="diplay-4">
+						DISPLAY 4
 					</div>
 				</div>
-				<div>
-					&nbsp;</br>
-				</div>
-				<h1><span class="text-danger">The</span><span class="text-warning"> bootstrap 4</span> <span class="text-info">color</span> <span class="text-primary">chart:</span></h1>
-				<table class="table table-hover table-dark">      
-				  <tr>
-				    <td><h1 class="text-danger">Danger <small>#C0392B</small></h1></td>
-				  </tr>
-				  <tr>
-				    <td><h2 class="text-warning">Warning <small>#F1C40F</small></h2></td>
-				  </tr>
-				  <tr>
-				    <td class="text-info"><h3>Info <small>#3498DB</small></h3></td>
-				  </tr>
-				  <tr>
-				   <td class="text-primary"><h4>Primary <small>#2471A3</small></h4></td>
-				  </tr>
-				  <tr>
-				    <td class="text-secondary"><h5>Secondary <small>#808B96</small></h5></td>
-				  </tr>
-				  <tr>
-				    <td class="text-success"><h6>Success <small>#229954</small></h6></td>
-				  </tr>
-				</table>
-				<div>
-					<p>
-						<dl>
-							<code><button style="background-color: lightblue;" class="text-danger">Danger</button></code>
-							<code><button style="background-color: lightblue;" class="text-warning">Warning</button></code>
-							<code><button style="background-color: lightblue;" class="text-info">Info</button></code>
-							<code><button style="background-color: lightblue;" class="text-primary">Primary</button></code>
-							<code><button style="background-color: lightblue;" class="text-secondary">Secondary</button></code>
-						</dl>
-					</p>
-				</div>
-				<div>
-					<h1>Example:</h1>
-					<p>The admin-commands are:-</br>
-						<kbd>alt + f4</kbd></br>
-						<kbd>alt + f8</kbd></br>
-						<kbd><i class="fab fa-windows"></i> + G</kbd>
-					</p>
-				</div>
-				<div>
-					<h1>Javascript code:</h1>
-					<kbd>
-						for (var name = 5; name < 10; name++) { </br>
-						&nbsp; document.write("Good Job!");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <br>
-						}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					</kbd>
-				</div>
-				<div>
-					<pre>
-						This is a pre tag
-					</pre>
-				</div>
-				<kbd class="font-itallic">
-					alert("text");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
-					window.confirm("text");
-				</kbd>
-				<div class="diplay-1">
-					DISPLAY 1
-				</div>
-				<div class="diplay-2">
-					DISPLAY 2
-				</div>
-				<div class="diplay-3">
-					DISPLAY 3
-				</div>
-				<div class="diplay-4">
-					DISPLAY 4
-				</div>
-			</div>
-			<blockquote class="blockquote">
-				<p></p>
-			</blockquote>
-			<!-- <div class="container-fluid"> -->
-			  <div class="jumbotron text-primary">
-			    <h1 class="text-warning">Bootstrap Tutorial</h1>      
-			    <p>Scratch is the most popular website you ever visit please visit <a href="https://scratch.mit.edu/"></a>Scratch</p>
-			    <p>Call 499 623 679.</p>      
-			    <p>Call 0451 455 239.</p>      
-			  </div>
-			<!-- </div> -->
-			  <h2>Animated Alerts</h2>
-			  <p>The .fade and .show classes adds a fading effect when closing the alert message.</p>
-				<div id="alerts">
-				  <div class="alert alert-success fade show">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Success!</strong>
+				<blockquote class="blockquote">
+					<p></p>
+				</blockquote>
+				<!-- <div class="container-fluid"> -->
+				  <div class="jumbotron text-primary">
+				    <h1 class="text-warning">Bootstrap Tutorial</h1>      
+				    <p>Scratch is the most popular website you ever visit please visit <a href="https://scratch.mit.edu/"></a>Scratch</p>
+				    <p>Call 499 623 679.</p>      
+				    <p>Call 0451 455 239.</p>      
 				  </div>
-				  <div class="alert alert-info fade show">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Info!</strong>
-				  </div>
-				  <div class="alert alert-warning fade show">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Warning!</strong>
-				  </div>
-				  <div class="alert alert-danger fade show">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Danger!</strong>
-				  </div>
-				  <div class="alert alert-primary fade show">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Primary!</strong>
-				  </div>
-				  <div class="alert alert-secondary fade show">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Secondary!</strong>
-				  </div>
-				  <div class="alert alert-dark fade show disable">
-				    <button type="button" class="close" data-dismiss="alert">&times;</button>
-				    <strong>Dark!</strong>
-				  </div>
-				</div>
-				<div class="w-100 h-5">
-					<hr></br>
-					<hr>
-				</div>
-				<div class="alert alert-primary fade show">
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<strong>The test</strong>
-				</div>
-				<div id="test">		
-					<button type="button" class="btn-outline-primary btn-lg btn-block">
-						Sovann SOK
-					</button>		
-					<button type="button" class="btn-outline-danger btn-lg btn-block">
-						Somaly SOK
-					</button>		
-					<button type="button" class="btn-outline-warning btn-lg btn-block">
-						Channy SOK
-					</button>		
-					<button type="button" class="btn-outline-secondary btn-lg btn-block">
-						Veasna CHAR
-					</button>
-				</div>
-				<div class="w-100 h-5">
-					<hr></br>
-					<hr>
-				</div>
-				<div class="w-100 h-5">
-					<hr></br>
-					<hr>
-				</div>
-				<div class="btn-group">
-			      <button type="button" class="btn btn-primary">Sovann SOK</button>
-		    	  <button type="button" class="btn btn-warning">Channy SOK</button>
-				  <div class="btn-group">
-				    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-				       Sovann SOK
-				    </button>
-				    <div class="dropdown-menu">
-				      <a class="dropdown-item" href="#">Shop</a>
-				      <a class="dropdown-item" href="#">Reports</a>
-				    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-				       Channy Sok
-				    </button>
-				    <div class="dropdown-menu">
-				      <a class="dropdown-item" href="#">Shop</a>
-				      <a class="dropdown-item" href="#">Reports</a>
-				    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-						Somaly Sok	       
-				    </button>
-				    <div class="dropdown-menu">
-				      <a class="dropdown-item" href="#">Shop</a>
-				      <a class="dropdown-item" href="#">Reports</a>
-				    </div>
-				    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-						Veasna CHAR       
-				    </button>
-				    <div class="dropdown-menu">
-				      <a class="dropdown-item" href="#">Shop</a>
-				      <a class="dropdown-item" href="#">Reports</a>
-				    </div>
-	  			</div>
-				<div class="w-100 h-5">
-					<hr></br>
-					<hr>
-				</div>
-				<div id="example">
-					<label></label>
-					<div></div>
+				<!-- </div> -->
+				  <h2>Animated Alerts</h2>
+				  <p>The .fade and .show classes adds a fading effect when closing the alert message.</p>
+					<div id="alerts">
+					  <div class="alert alert-success fade show">
+					    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <strong>Success!</strong>
+					  </div>
+					  <div class="alert alert-info fade show">
+					    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <strong>Info!</strong>
+					  </div>
+					  <div class="alert alert-warning fade show">
+					    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <strong>Warning!</strong>
+					  </div>
+					  <div class="alert alert-danger fade show">
+					    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <strong>Danger!</strong>
+					  </div>
+					  <div class="alert alert-primary fade show">
+					    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <strong>Primary!</strong>
+					  </div>
+					  <div class="alert alert-secondary fade show">
+					    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <strong>Secondary!</strong>
+					  </div>
+					  <div class="alert alert-dark fade show disable">
+					    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					    <strong>Dark!</strong>
+					  </div>
+					</div>
+					<div class="w-100 h-5">
+						<hr></br>
+						<hr>
+					</div>
+					<div class="alert alert-primary fade show">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<strong>The test</strong>
+					</div>
+					<div id="test">		
+						<button type="button" class="btn-outline-primary btn-lg btn-block">
+							Sovann SOK
+						</button>		
+						<button type="button" class="btn-outline-danger btn-lg btn-block">
+							Somaly SOK
+						</button>		
+						<button type="button" class="btn-outline-warning btn-lg btn-block">
+							Channy SOK
+						</button>		
+						<button type="button" class="btn-outline-secondary btn-lg btn-block">
+							Veasna CHAR
+						</button>
+					</div>
+					<div class="w-100 h-5">
+						<hr></br>
+						<hr>
+					</div>
+					<div class="w-100 h-5">
+						<hr></br>
+						<hr>
+					</div>
+					<div class="btn-group">
+				      <button type="button" class="btn btn-primary">Sovann SOK</button>
+			    	  <button type="button" class="btn btn-warning">Channy SOK</button>
+					  <div class="btn-group">
+					    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+					       Sovann SOK
+					    </button>
+					    <div class="dropdown-menu">
+					      <a class="dropdown-item" href="#">Shop</a>
+					      <a class="dropdown-item" href="#">Reports</a>
+					    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+					       Channy Sok
+					    </button>
+					    <div class="dropdown-menu">
+					      <a class="dropdown-item" href="#">Shop</a>
+					      <a class="dropdown-item" href="#">Reports</a>
+					    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+							Somaly Sok	       
+					    </button>
+					    <div class="dropdown-menu">
+					      <a class="dropdown-item" href="#">Shop</a>
+					      <a class="dropdown-item" href="#">Reports</a>
+					    </div>
+					    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+							Veasna CHAR       
+					    </button>
+					    <div class="dropdown-menu">
+					      <a class="dropdown-item" href="#">Shop</a>
+					      <a class="dropdown-item" href="#">Reports</a>
+					    </div>
+		  			</div>
+					<div class="w-100 h-5">
+						<hr></br>
+						<hr>
+					</div>
+					<div id="example">
+						<label></label>
+						<div></div>
+					</div>
 				</div>
 			</div>
 		</div>
+
+	<div class="w-100 h-5">
+		<hr></br>
+		<hr>
 	</div>
+
+	<div class="container-fluid">
+		<div id="pagination">
+			<ul class="pagination pagination-lg">
+			  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+			  <li class="page-item"><a class="page-link" href="#">1</a></li>
+			  <li class="page-item"><a class="page-link" href="#">2</a></li>
+			  <li class="page-item"><a class="page-link" href="#">3</a></li>
+			  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+			</ul>
+
+			<ul class="pagination pagination-lg">
+			  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+			  <li class="page-item"><a class="page-link" href="#">1</a></li>
+			  <li class="page-item"><a class="page-link" href="#">2</a></li>
+			  <li class="page-item"><a class="page-link" href="#">3</a></li>
+			  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+			</ul>
+		</div>
+
+		<div id="bread">
+			<ul class="breadcrumb">
+			  <li class="breadcrumb-item"><a href="#">Top Winners:</a></li>
+			  <li class="breadcrumb-item"><a href="#">Channy SOK 1<sup>st</sup></a></li>
+			  <li class="breadcrumb-item"><a href="#">Sovann SOK 2<sup>nd</sup></a></li>
+			  <li class="breadcrumb-item"><a href="#">Somaly SOK 3<sup>rd</sup></a></li>
+			  <li class="breadcrumb-item"><a href="#">Veasna CHAR 4<sup>th</sup></a></li>
+			</ul>
+		</div>
+
+		<div id="winners_list">
+			<ul class="list-group text-white">
+			  <li class="list-group-item active">Winners List</li>
+			  <li class="list-group-item list-group-item-action bg-danger list-group-item-action">Channy SOK 1<sup>st</sup></li>
+			  <li class="list-group-item list-group-item-action bg-warning list-group-item-action">Sovann SOK 2<sup>nd</sup></li>
+			  <li class="list-group-item list-group-item-action bg-info list-group-item-action">Heng SEAN 3<sup>rd</sup></li>
+			  <li class="list-group-item list-group-item-action bg-primary list-group-item-action">Somaly SOK 4<sup>th</sup></li>
+			  <li class="list-group-item list-group-item-action bg-success list-group-item-action">Ah Mu 5<sup>th</sup></li>
+			  <li class="list-group-item list-group-item-action bg-secondary list-group-item-action">Veasna Char 6<sup>th</sup></li>
+			  <li class="list-group-item list-group-item-action bg-dark list-group-item-action">Jerry JERRY 7<sup>th</sup></li>
+			  <li class="list-group-item list-group-item-action bg-warning list-group-item-action">Sing Ha 8<sup>th</sup></li>
+			  <li class="list-group-item list-group-item-action bg-primary list-group-item-action">Retsmay Ven Leang 9<sup>th</sup></li>
+			</ul>
+		</div>
+
+		<div id="progress_bar progress-bar-lg">
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary progress-bar-lg" style="width: 100%">Progress_bar1</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger progress-bar-lg" style="width: 100%">Progress_bar2</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary progress-bar-lg" style="width: 100%">Progress_bar1</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger progress-bar-lg" style="width: 100%">Progress_bar2</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-info progress-bar-lg" style="width: 100%">Progress_bar3</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning progress-bar-lg" style="width: 100%">Progress_bar4</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary progress-bar-lg" style="width: 100%">Progress_bar5</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-success progress-bar-lg" style="width: 100%">Progress_bar6</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-dark progress-bar-lg" style="width: 100%">Progress_bar7</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-basic progress-bar-lg" style="width: 100%">Progress_bar8</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger progress-bar-lg" style="width: 100%">Progress_bar9</div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning progress-bar-lg" style="width: 100%">Progress_bar10</div>
+		</div>
+		<div class="mt-5 mb-5 w-100" style="margin: auto;">
+			<ul>
+			    <li class="list-group-item d-flex justify-content-between align-items-center bg-primary">
+			    	Inbox
+			    	<div class="dropdown-menu-right">
+					  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					    <span class="badge badge-danger badge-pill">12</span>
+					  </button>
+					  <div class="dropdown-menu">
+					    <a class="dropdown-item" href="#">Microsoft Account problem</a>
+					    <a class="dropdown-item" href="#">Facebook</a>
+					    <a class="dropdown-item" href="#">Learning time!</a>
+				    </div>
+	  			</li>
+			</ul>
+		</div>
+		<div>
+			<div class="card">
+			    <div class="card-header">
+			    	<img src="">
+			    </div>
+			    <div class="card-body">
+			    	<h1>John Doe</h1>
+			    	<p>Some example text some<br /> example text. John Doe is an<br /> architect and engineer </p>
+			    </div>
+			    <div class="card-footer">
+			    	<button type="button" class="btn-primary form-control form-control-lg" href="#">
+						See Profile        
+			        </button>
+			    </div>
+			    <style type="text/css">
+			    	.img {
+			    		width: 90px;
+			    		height: 799px;
+			    	}
+
+			    	.img_avatar {
+			    		height: 799px;
+			    	}
+			    </style>
+			</div>
+		</div>
+	    <div class="card bg-danger text-white mt-5 mb-5">
+	 	   <div class="card-body">Mega card https://www.w3schools.com/bootstrap4/img_avatar1.png</div>
+	    </div>
+	    <div class="card mt-5 mb-5">
+	    	<div class="card-header"><img src="" class="img-avatar w-100"></div>
+	    	<div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br />
+	    	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<br />
+	    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo<br />
+	    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse<br />
+	    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br />
+	    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	    	<div class="card-footer">
+				<button type="button" class="form-control form-control-lg btn-lg btn-outline-primary bg-danger text-white">See Project</button>
+			</div>
+	    </div>
+		<div class="card" style="width:500px">
+		  <img class="card-img-top" src="background2.jpg" alt="Card image">
+		  <div class="card-img-overlay">
+		    <h4 class="card-title text-white">Sovann SOK  and Channy SOK</h4>
+		    <p class="card-text text-white">Mega People</p>
+		    <a href="#" class="btn btn-primary">See information</a>
+		  </div>
+		</div>
+		<div class="card-deck">
+		  <div class="card bg-danger">
+		    <div class="card-body text-center">
+		      <p class="card-text">Channy SOK</p>
+		    </div>
+		  </div> 
+		  <div class="card bg-primary">
+		    <div class="card-body text-center">
+		      <p class="card-text">Sovann SOK</p>
+		    </div>
+		  </div> 
+		  <div class="card bg-warning">
+		    <div class="card-body text-center">
+		      <p class="card-text">Somaly SOK</p>
+		    </div>
+		  </div>
+		  	<div class="card bg-success">
+		      <div class="card-body text-center">
+		    	<p class="card-text">Veasna CHAR</p>
+		      </div>
+		    </div>
+		</div>
+		<div class="card-columns mt-5">
+		    <div class="card bg-danger">
+		      <div class="card-body text-center">
+		        <p class="card-text">1</p>
+		      </div>
+		    </div>  
+		    <div class="card bg-danger">
+		      <div class="card-body text-center">
+		        <p class="card-text">2</p>
+		      </div>
+		    </div>
+		    <div class="card bg-primary">
+		      <div class="card-body text-center">
+		        <p class="card-text">3</p>
+		      </div>
+		    </div>
+		    <div class="card bg-primary">
+		      <div class="card-body text-center">
+		        <p class="card-text">4</p>
+		      </div>
+		    </div>
+		    <div class="card bg-warning">
+		      <div class="card-body text-center">
+		        <p class="card-text">5</p>
+		      </div>
+		    </div>
+		    <div class="card bg-success">
+		      <div class="card-body text-center">
+		        <p class="card-text">6</p>
+	  	      </div>
+	  	    </div>
+	  	  </div>
+	  	 </div>
+	  </div>
+	  <div class="card" style="width:400px">
+	  	<img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image">
+	  	<div class="card-body">
+	    	<h4 class="card-title">Sovann Sok</h4>
+	    	<p class="card-text">Donkey Screems AhAhAhAh!!!</p>
+		    <a href="#" class="btn btn-primary">See Profile</a>
+	  </div>
+	  <div class="card img-fluid" style="width:500px">
+	   		<img class="card-img-top" src="https://cdn2.scratch.mit.edu/get_image/user/35070088_32x32.png" alt="Card image" style="width:100%">
+		    <div class="card-img-overlay">
+		      <h4 class="card-title">Sovann Sok</h4>
+		      <p class="card-text">
+		      	Mr. Sovann Sok is a gaming person!</br>
+		      	Mr. Sovann Sok is a gaming person!</br>
+		      	Mr. Sovann Sok is a gaming person!</br>
+			  	Mr. Sovann Sok is a gaming person!
+		      </p>
+		      <a href="#" class="btn btn-primary">See Profile</a>
+		    </div>
+	  </div>
+	  <div class="card-columns">
+		<div class="alert alert-primary fade show">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		  	<div class="card bg-danger">
+		  		<p class="card-text">
+		  			Danger!
+		  		</p>
+	  		</div>
+		</div>
+	  </div>
+	  <div class="card-deck mt-5 mb-5">
+	  	<div class="card bg-primary">
+	  		<div class="card-body text-center">
+	  			<p class="card-text">
+					Card 1
+			  	</p class="card-text">
+			</div>
+	  	</div>	  	
+		<div class="card bg-warning">
+		    <div class="card-body text-center">
+		    	<p class="card-text">
+					Card 2
+		  	    </p>
+		    </div>
+		  </div>
+		  <div class="card bg-success">
+		    <div class="card-body text-center">
+		        <p class="card-text">
+					Card 3
+		        </p>
+		    </div>
+		  </div>
+		  <div class="card bg-danger">
+		    <div class="card-body text-center">
+		        <p class="card-text">
+					Card 4
+		        </p>
+		    </div>
+		  </div> 
+		</div>
+		<div class="dropdown-menu-right mt-5 mb-5">
+		  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+		    dropdown-menu-right1
+		  </button>
+		  <div class="dropdown-menu">
+		    <a class="dropdown-item" href="#">Link 1</a>
+		    <a class="dropdown-item" href="#">Link 2</a>
+		    <a class="dropdown-item" href="#">Link 3</a>
+		  </div>
+		</div>
+		<div class="dropdown-menu-right mt-5 mb-5">
+		  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+		    dropdown-menu-right2
+		  </button>
+		  <div class="dropdown-menu">
+		    <a class="dropdown-item" href="#">Link 1</a>
+		    <a class="dropdown-item" href="#">Link 2</a>
+		    <a class="dropdown-item" href="#">Link 3</a>
+		  </div>
+		</div>
+	</div>
+  <div class="btn-group mt-5 mb-5">
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-header" href="#">
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+    </div>
+  </div>
+  
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-header" href="#">
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 3</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 4</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 5</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 6</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 7</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 8</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 9</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 10</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 11</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 12</a>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-header" href="#">
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 3</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 4</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 5</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 6</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 7</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 8</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 9</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 10</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 11</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 12</a>
+    </div>
+  </div>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-header" href="#">
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 3</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 4</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 5</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 6</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 7</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 8</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 9</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 10</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 11</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 12</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-header" href="#">
+      <h1 class="dropdown-item">dropdown-menu-right 1</h1>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 3</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 4</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 5</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 6</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 7</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 8</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 9</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 10</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 11</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 12</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-header" href="#">
+      <a class="dropdown-item" href="#">dropdown-menu-right 1</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 2</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 3</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 4</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 5</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 6</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 7</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 8</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 9</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 10</a>
+
+      <a class="dropdown-item" href="#">dropdown-menu-right 11</a>
+      <a class="dropdown-item" href="#">dropdown-menu-right 12</a>
+    </div>
+  </div>
+</div>
+<button type="button" class="btn btn-primary" data-toggle="demo" data-target="#demo">Simple collapsible</button>
+<div id="demo" class="demo">
+  Lorem ipsum dolor sit amet, 
+  consectetur adipisicing elit,
+  sed do eiusmod tempor 
+  incididunt ut labore et
+  dolore magna aliqua.
+  Ut enim ad minim veniam,
+  quis nostrud exercitation 
+  ullamco laboris nisi ut 
+  aliquip ex ea 
+  commodo consequat.
 </div>
 
-<div class="w-100 h-5">
-	<hr></br>
-	<hr>
+<!-- Collapse #2 -->
+
+<div class="container-fluid mb-5 mt-5">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          ID: #1
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Collapse #1
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        ID: #2
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Collapse #2
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          ID: #3
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Collapse #3
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- End of Collapse #2 -->
 
 <div class="container-fluid">
-	<div id="pagination">
-		<ul class="pagination pagination-lg">
-		  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-		  <li class="page-item"><a class="page-link" href="#">1</a></li>
-		  <li class="page-item"><a class="page-link" href="#">2</a></li>
-		  <li class="page-item"><a class="page-link" href="#">3</a></li>
-		  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-		</ul>
-
-		<ul class="pagination pagination-lg">
-		  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-		  <li class="page-item"><a class="page-link" href="#">1</a></li>
-		  <li class="page-item"><a class="page-link" href="#">2</a></li>
-		  <li class="page-item"><a class="page-link" href="#">3</a></li>
-		  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-		</ul>
+	<div id="collapse">
+		<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapse">Simple collapsible</button>
+		<div id="collapse" class="collapse">
+		  Lorem ipsum dolor sit amet, 
+		  consectetur adipisicing elit,
+		  sed do eiusmod tempor 
+		  incididunt ut labore et
+		  dolore magna aliqua.
+		  Ut enim ad minim veniam,
+		  quis nostrud exercitation 
+		  ullamco laboris nisi ut 
+		  aliquip ex ea 
+		  commodo consequat.
+		  <a href="https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp">W3schools</a>
+		</div>
 	</div>
+	<div id="cssTest">
+		<table class="table table-dark table-stripe table-hover w-100">
+			<tr>
+				<th>ID:</th>
+				<th>CLASS:</th>
+				<th>length:</th>
+			</tr>
+			<tr>
+				<td id="id"></td>
+				<td id="class"></td>
+				<td><input type="text" id="length"></td>
+			</tr>
+			<tr>
+				<td id="id"></td>
+				<td id="class"></td>
+				<td><input type="text" id="length"></td>
+			</tr>
+			<tr>
+				<td id="id"></td>
+				<td id="class"></td>
+				<td><input type="text" id="length"></td>
+			</tr>
+			<tr>
+				<td id="id"></td>
+				<td id="class"></td>
+				<td><input type="text" id="length"></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			var id = document.getElementById("id");
+			var class = document.getElementById("class");
+			var length = document.getElementById("length");
+			function length() {
+				document.getElementById("length").innerHTML = length.length;
+			}
 
-	<div id="bread">
-		<ul class="breadcrumb">
-		  <li class="breadcrumb-item"><a href="#">Top Winners:</a></li>
-		  <li class="breadcrumb-item"><a href="#">Channy SOK 1<sup>st</sup></a></li>
-		  <li class="breadcrumb-item"><a href="#">Sovann SOK 2<sup>nd</sup></a></li>
-		  <li class="breadcrumb-item"><a href="#">Somaly SOK 3<sup>rd</sup></a></li>
-		  <li class="breadcrumb-item"><a href="#">Veasna CHAR 4<sup>th</sup></a></li>
-		</ul>
+			function random() {
+				var random = ["Roblox", "Block city wars", "Minecraft"];
+				var i=0;
+				for (i=0; i<7; i++) {
+					random[i]
+				}
+			}
+		</script>
 	</div>
-
-	<style type="text/css">
-		.hover:hover {
-			background: linear-gradient(red, orange);
-		}
-	</style>
-
-	<div id="winners_list">
-		<ul class="list-group">
-		  <li class="list-group-item active">Winners List</li>
-		  <li class="list-group-item list-group-item-action hover bg-danger">Channy SOK 1<sup>st</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-warning">Sovann SOK 2<sup>nd</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-info">Heng SEAN 3<sup>rd</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-primary">Somaly SOK 4<sup>th</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-success">Ah Mu 5<sup>th</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-secondary">Veasna Char 6<sup>th</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-dark">Jerry JERRY 7<sup>th</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-light">Sing Ha 8<sup>th</sup></li>
-		  <li class="list-group-item list-group-item-action hover bg-white">Retsmay Ven Leang 9<sup>th</sup></li>
-		</ul>
+	<div class="randommize">
+		<div id="answer">
+			
+		</div>
+		<button type="button">
+			Redeem!
+		</button>
 	</div>
-
-	<div id="progress_bar">
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary progress-bar-lg" style="width: 100%">Progress_bar1</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger progress-bar-lg" style="width: 100%">Progress_bar2</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary progress-bar-lg" style="width: 100%">Progress_bar1</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger progress-bar-lg" style="width: 100%">Progress_bar2</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-info progress-bar-lg" style="width: 100%">Progress_bar3</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning progress-bar-lg" style="width: 100%">Progress_bar4</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary progress-bar-lg" style="width: 100%">Progress_bar5</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-success progress-bar-lg" style="width: 100%">Progress_bar6</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-dark progress-bar-lg" style="width: 100%">Progress_bar7</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-basic progress-bar-lg" style="width: 100%">Progress_bar8</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger progress-bar-lg" style="width: 100%">Progress_bar9</div>
-		<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning progress-bar-lg" style="width: 100%">Progress_bar10</div>
+	<div id="form">
+		<form>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" id="email">
+			</div>
+		    <div class="form-group">
+		        <label for="pwd">Password:</label>
+		    	<input type="password" class="form-control" id="pwd">
+		    </div>
+		    <div class="form-group form-check">
+		  	    <label class="form-check-label">
+		      		<input class="form-check-input" type="checkbox"> Remember me
+		    	</label>
+		    </div>
+		    <button type="submit" class="btn btn-primary">Submit</button>
+		</form>
 	</div>
+</div>
+
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Work
+  </label>
+</div>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Computer game
+  </label>
+</div>
+<div class="form-check-inline disabled">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="" disabled>Disabled
+  </label>
 </div>
 
 </body>
