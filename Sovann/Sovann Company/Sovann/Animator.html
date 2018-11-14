@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link rel="apple-touch-icon" sizes="57x57" href="Sovann/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Sovann/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Sovann/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Sovann/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Sovann/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Sovann/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Sovann/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Sovann/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Sovann/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="Sovann/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Sovann/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Sovann/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Sovann/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<div>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	  <!-- Brand/logo -->
+	  <a class="navbar-brand" href="#"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHsAewMBEQACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQgBBwMEBgL/xABBEAABAwMBBgIFCAYLAAAAAAABAAIDBAURBgcSEyExQVFhMnGBkaEIFCNCUsLR8CIkcpKzwRYzNDZFZHWClKKx/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAEEAwUGAv/EACoRAQACAgIBAgQGAwAAAAAAAAABAgMEBRESEyEiQWGhFDFRcYGxBjIz/9oADAMBAAIRAxEAPwDeKAgICAgICDBOBzQcbZY3OLWPY4jqA5ByIMoCAgICAgICAgICAgIK77Ytodxq73VWK1VD6ahpTwpiw4dM8elk9gOmPyA8RVSi2RQVlsr54qppBa9kpyfNVMGTLa8xaHQ8np6OHXrfBPxf231sd1zPq201FPccG40JaJHjkJWOzh3r5EH2eKtuebFQEBAQEBAQEGEGCeaIZRLCB1CCom0W21Fq1pd6epY5pdUOkYXfXY45BQeb5oN2fJutlQJ7vdXse2nLWQMd2e7JLh7P0f3kG9UBAQEBAQEBBgohXHW2odTUldW/OblcqOsErt2GGV7GAZ5boHbzVSts3q9T+Toc2Hjo0POv/R5KPXOr4el+uf8Avmcf/Vb6hz6Ysm0LVk9Vwpr7UBoHRwBJ96wZ7zjp3DZcVqY9rYjHknqGbltP1fS1b4ob257B0PDZ+C94bTekWli5DXprbNsVJ7iHmtRapu2pXxPvNQyokiG6x5ia1wHhkDOPJZFJ2hQ2mhnoZ67jT0nFbx44ngOezvj8+5VcOa97zEw6DlOM19XXrkx27mfutHpKWyy2CkdpzhC3BuImxdG+R8/FWnPptAQEBAQEBAQEHyY2O9JoPrCDryW+il/rKSB/7UYKDqzadsswPFtNC/PXep2n+SDjGltPj/BLd/xmfggiNXabscOlLzLDZ6BkjKGZzXNp2gghhwRyQVbstsq73cYbdQM4lTKHcNmfSLWl2Pgie5lPaL1feNDXh4hY8xF+7VUMuQHY6+p3XmhETM+0LOaY1Hb9S25tbbZd4dJIncnxO8HDsVHcTHsm9LUnq0dJhS8soCAgICAgICAgICCE1uS3Rl+IGSLdUEDx+jcg0Ds1oaSh1zYahs3MOkLiXcscJ+T7FUw573vMTDoeT4zX1teuSlu5n7urtO1VbL1rT57aaSLg0w4bqhowao/aPq6BWMlPOs1afS2Pw+auWY76bY2N2WtpqGovNdE6nbXtYIYXHnuN3sOcPPe5eXrWPBh9KPeVzluRrvZItWvUQ2Us7VMoCAgICAgICAgICCF1p/c++f6fP/DcgqDFHVRRfOY2yMbgt3xy5EYPwJC8edfLx+ax+Gzel6vj8P6tm7GdnpvlU2+3iHFtgd9BE8f2h47/ALI+JXtXWKAwAB0HRBlAQEBAQEBAQEBAQEHkdqN8o7Lou5mreBJVU8lPAzu97mkD2DOSg1BT2C1CayUE9x3qSuqI4H4I3nB3hjpk4Ge2Vo9PLfPsW8q9dOq2t30uPjBX3+qwtHTQ0dLFTU0bYoYmhrGNGA0Dst45V2EBAQEBAQEBAQEBAQdS411NbaGatrZWxU8DC+R7ugATpHuqpr7VdZrfUnHYyUwNPCoqZoJIaT4D6xP55IlFX2zXHSt5+Z1o4NZCGSgtPokgOGD5fyQW20vdo75p+gucZbioha5270DuhHsOQglUBAQEBAQEBAQEBAQV522a0nvM5tFsJFpp3/TSt6TyD7o+JXiL1meoZ51c1cXqzX4UzsL0EYmt1Pd4cPcP1GJ49Ed5D6+3v8F77+TA4vlG2PBtt9hb400x+LfvIJP5O19NXY66zTOJfRSCSLJ+o/sPUQf3kG30BAQEBAQEBAQEBBxzu3IZH/ZaSgqhpmrZdr/abTVQNfBNWxRyj7Td4ZHuVeuvFcnm3OXl75NKNWa/ytfHGyKNscbQ1jRhrQMABWGmeY2m2hl60Nd6ZwJeyAzR4HPfZ+kPfjHtUEfVp3ZTLTWfWFtNLMP1sOgkbvZ3wRkfEBVsOTJa8xaG/wCT0tPDrUvht7z91jQrTQCAgICAgICAgICDqXZ/DtVY/wCzA8/9Sgqhs4ZxNf2Uf5xp9xQW5UDhrIRPSTQu9GSNzT7RhSKk6KmNJry0OJwG3BjTnw38ITMrehAQEBAQEBAQEBBhBDaurIKHTVzlqZ44WmllDTI4Ny4tOAM91BETMK0bKYXO2g2feaQDMTnHkSkTHb1alqxEzH5rXqXn9wjIwgp/dWm066qGjkaa4e7D0FwIzljT4gIPpAQEBAQEBAQEGEGvdqOl7tfJKKotkYqWwNe11OXtaQTjmM8u3iq+xitk/wBZbjh9/FpXtOSvfaD0HoS9UuoKW43aljooqQlwZxWvc8lpAxu5A6rxg17Y7eUys8ry+HcwxjpXpt7srbnkFrS7VFk0zXXCjjD54mjd3hkNy4DeI8BnPsWPJM1rMwz6mKmbPXHaeolWu7W4XGvqrlPUl1RM8yvIAwXE57KlXct3ETDrM3+N4Ipa1b9dLS2WSSW0UUkzHMldAwvY8YLTgZBC2LjJd1AQEBAQEBAQEBAQMICD4c0PaWuALTyIPdBC/wBEdOipbUNstA2RpyCIGjn44wiYtMe0fNOAAdEQygICAgICAgICAgICAgwiBBlEiAgICAg//9k=" style="width: 50px; border-radius: 50%"></a>
+	  
+	  <!-- Links -->
+	  <ul class="navbar-nav">
+	    <li class="nav-item">
+	      <a class="nav-link" href="#">Link 1</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#">Link 2</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#">Link 3</a>
+	    </li>
+	  </ul>
+	</nav>
+</div>
+	
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>
+
+	
+</body>
+</html>
