@@ -17,7 +17,7 @@
 		font-size: 20px;
 		color: white;
 		box-shadow: 10px 10px 5px #ECF0F1;
-		margin: 20px 20px;
+		margin: 20px;
 		text-align: center;
 	}
 </style>
@@ -26,7 +26,14 @@
 
 </div>
 
-<input type="text" id="text" onkeypress="append(event)">
+<input type="text" id="text" onkeypress="append(event);">
+
+<div>
+	&nbsp;
+	&nbsp;
+	&nbsp;
+	&nbsp;
+<div>
 
 <script>
 	
@@ -39,8 +46,12 @@
 		var label = document.createElement("label");
 		label.style.color = "white";
 		label.style.background = "blue";
-		label.style.border = "solid 5px red";
+		label.style.border = "solid 25px blue";
 		label.style.align = "center";
+		label.style.width = "10px";
+		label.style.height = "10px";
+		label.style.borderBottom = "5px";
+		label.style.margin = "5px";
 		label.innerHTML = String.fromCharCode(event.which);//this.text().focus(); //text.charAt(text.length-1);
 		document.getElementById("output").appendChild(label);
 	}
