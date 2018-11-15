@@ -26,7 +26,7 @@
 
 </div>
 
-<input type="text" id="text" onkeyup="append()">
+<input type="text" id="text" onkeypress="append(event)">
 
 <script>
 	
@@ -40,7 +40,8 @@
 		label.style.color = "white";
 		label.style.background = "blue";
 		label.style.border = "solid 5px red";
-		label.innerHTML = text.charAt(text.length-1);
+		label.style.align = "center";
+		label.innerHTML = String.fromCharCode(event.which);//this.text().focus(); //text.charAt(text.length-1);
 		document.getElementById("output").appendChild(label);
 	}
 
