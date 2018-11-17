@@ -51,15 +51,19 @@
 		var text = control("text");
 		var label = document.createElement("div");
 
-		label.classList.add("answer");
-		// label.style.border = "solid 0px blue";
-		// label.style.background = "blue";
-		// label.style.color = "white";
-		// label.style.margin = "30px 30px 30px 30px";
-		// label.style.align = "center";
-		// label.style.width = "50px";
-		// label.style.height = "50px";
-		// label.style.fontSize = "50px";
+		// label.classList.add("answer");
+		label.style.border = "solid 5px red";
+		label.style.background = "blue";
+		label.style.color = "white";
+		label.style.margin = "30px 30px 30px 30px";
+		label.style.align = "center";
+		label.style.width = "80px";
+		label.style.height = "80px";
+		label.style.textAlign = "center";
+		label.style.fontSize = "35px";
+		label.style.lineHeight = "70px";
+		label.style.float = "left";
+
 		label.innerHTML = String.fromCharCode(event.which);//this.text().focus(); //text.charAt(text.length-1);
 		document.getElementById("output").appendChild(label);
 	}
