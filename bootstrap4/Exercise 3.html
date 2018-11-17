@@ -49,6 +49,15 @@
 
 	function append() {
 		var text = control("text");
+
+		var label = labelCharacter();
+
+		label.innerHTML = String.fromCharCode(event.which);//this.text().focus(); //text.charAt(text.length-1);
+		document.getElementById("output").appendChild(label);
+	}
+
+
+	function labelCharacter() {
 		var label = document.createElement("div");
 
 		// label.classList.add("answer");
@@ -64,10 +73,8 @@
 		label.style.lineHeight = "70px";
 		label.style.float = "left";
 
-		label.innerHTML = String.fromCharCode(event.which);//this.text().focus(); //text.charAt(text.length-1);
-		document.getElementById("output").appendChild(label);
+		return label;
 	}
-
 </script>
 
 </body>
