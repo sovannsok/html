@@ -48,6 +48,10 @@
 	}
 </style>
 
+<div id="output2" class="output2">
+	
+</div>
+
 <div id="output" class="output">
 	
 </div>
@@ -55,7 +59,7 @@
 <input type="text" id="firstText">
 <input type="text"  id="sign">
 <input type="text" id="secondText">
-<button onclick="append()">Submit</button>
+<button onclick="append() append2() var doc = document.getElementById('button'); doc.style.border = 'solid 9px red';" id="button">Submit</button>
 
 <script>
 	
@@ -79,6 +83,24 @@
 
 		document.getElementById("output").appendChild(label);
 		document.getElementById("output").appendChild(br);
+	}
+
+	function append2() {
+		var first = parseFloat(control("firstText"));
+		var second = parseFloat(control("secondText"));
+		var sign = document.getElementById("sign").value;
+		
+		var label = document.createElement("label");
+
+		label.innerHTML = first + " " + 
+						  sign + " " + 
+						  second + " = " + 
+						  calculate(first, second, sign);
+
+		var br = document.createElement("br");
+
+		document.getElementById("output2").appendChild(label);
+		document.getElementById("output2").appendChild(br);
 	}
 
 	function calculate(first, second, sign) {

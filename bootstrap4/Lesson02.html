@@ -2,23 +2,6 @@
 <html>
 <head>
 	<title>Bootsrap4</title>
-	<link rel="apple-touch-icon" sizes="57x57" href="bootstrap4/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="bootstrap4/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="bootstrap4/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="bootstrap4/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="bootstrap4/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="bootstrap4/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="bootstrap4/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="bootstrap4/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="bootstrap4/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="bootstrap4/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="bootstrap4/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="bootstrap4/favicon-16x16.png">
-	<link rel="manifest" href="bootstrap4/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="bootstrap4/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -307,700 +290,73 @@
     	</div>
     	<input type="text" class="form-control" placeholder="Username">
   	</div>
-	<style>
-	body {font-family: Arial, Helvetica, sans-serif;}
-	* {box-sizing: border-box;}
-
-	/* Button used to open the chat form - fixed at the bottom of the page */
-	.open-button {
-	  background-color: #555;
-	  color: white;
-	  padding: 16px 20px;
-	  border: none;
-	  cursor: pointer;
-	  opacity: 0.8;
-	  position: fixed;
-	  bottom: 23px;
-	  right: 28px;
-	  width: 280px;
-	}
-
-	/* The popup chat - hidden by default */
-	.chat-popup {
-	  display: none;
-	  position: fixed;
-	  bottom: 0;
-	  right: 15px;
-	  border: 3px solid #f1f1f1;
-	  z-index: 9;
-	}
-
-	/* Add styles to the form container */
-	.form-container {
-	  max-width: 300px;
-	  padding: 10px;
-	  background-color: white;
-	}
-
-	/* Full-width textarea */
-	.form-container textarea {
-	  width: 100%;
-	  padding: 15px;
-	  margin: 5px 0 22px 0;
-	  border: none;
-	  background: #f1f1f1;
-	  resize: none;
-	  min-height: 200px;
-	}
-
-	/* When the textarea gets focus, do something */
-	.form-container textarea:focus {
-	  background-color: #ddd;
-	  outline: none;
-	}
-
-	/* Set a style for the submit/send button */
-	.form-container .btn {
-	  background-color: #4CAF50;
-	  color: white;
-	  padding: 16px 20px;
-	  border: none;
-	  cursor: pointer;
-	  width: 100%;
-	  margin-bottom:10px;
-	  opacity: 0.8;
-	}
-
-	/* Add a red background color to the cancel button */
-	.form-container .cancel {
-	  background-color: red;
-	}
-
-	/* Add some hover effects to buttons */
-	.form-container .btn:hover, .open-button:hover {
-	  opacity: 1;
-	}
-	</style>
-	</head>
-	<body>
-
-	<h2>Popup Chat Window</h2>
-	<p>Click on the button at the bottom of this page to open the chat form.</p>
-	<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
-
-	<button class="open-button" onclick="openForm()">Chat</button>
-
-	<div class="chat-popup" id="myForm">
-	  <form action="/action_page.php" class="form-container">
-	    <h1>Chat</h1>
-
-	    <label for="msg"><b>Message</b></label>
-	    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-	    <button type="submit" class="btn">Send</button>
-	    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-	  </form>
-	</div>
-
-	<script>
-	function openForm() {
-	    document.getElementById("myForm").style.display = "block";
-	}
-
-	function closeForm() {
-	    document.getElementById("myForm").style.display = "none";
-	}
-	</script>
-	<style type="text/css">
-		.blue {
-			background: blue;
+	<button onclick="alert()">&nbsp;</button>
+	<input type="text" id="text">
+  	<script type="text/javascript">
+  		for (i=0;i<11;i++) {
+  			var array =
+	  		var first = i;
+	  		var second = i;
+	  		var total = parseInt(first + second);
+			console.log(first + " + " + second + " = " + total + " ");
 		}
+  	</script>
+  	<div id="person">
+  		<div id="head"></div>
+  		<div id="body"></div>
+  		<div id="leg1"></div>
+  	</div>
+  	<style type="text/css">
+  		#head {
+  			background-color: yellow;
+  			border-radius: 50%;
+  			width: 100px;
+  			height: 100px;
+  		}
 
-		.purple {
-			background: green;
-		}
+  		#body {
+  			background: green;
+  			width: 100px;
+  			height: 150px;
+  		}
+  	
+  		#leg1 {
+  			width: 100px;
+  			height: 150px;
+  			background-color: black;
+  		}
+  	</style>
+<style>
+#div1 {
+  font-size:48px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
 
-		.yellow {
-			background: red;
-		}
+<div id="div1" class="fa"></div>
 
-		table {
-			border: none;
-		}
-
-		th {
-			width: 5%;
-		}
-
-		.axiy {
-			border-top: 1px solid black;
-			border-right: 2px solid black;
-			border-bottom: 1px solid black;
-		}
-
-		.axisx {
-			border-top: 2px solid black;
-		}
-
-		.axisyr {
-			border-right: 2px solid black;
-		}
-
-		.axisytr {
-			border-top: 1px solid black;
-			border-right: 2px solid black;
-		}
-	</style>
-
-	<table cellspacing="0" cellpadding="0">
-		<tr>
-			<td>&nbsp;</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>18</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>17</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>16</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>15</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>14</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>13</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>12</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>11</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>10</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>9</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td class="axiy">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td class="axiy">&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td class="axiy">&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td class="axiy">&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td class="axiy">&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td class="axiy">&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<td>0</td>
-			<td class="axisytr">&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td class="blue">&nbsp;</td>
-			<td class="purple">&nbsp;</td>
-			<td class="yellow">&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td colspan="2">&nbsp;</td>
-		</tr>
-		<tr>
-			<th class="axisx">&nbsp;</th>
-			<th class="axisx axisyr">&nbsp;</th>
-			<th class="axisx">A</th>
-			<th class="axisx">B</th>
-			<th class="axisx">C</th>
-			<th class="axisx">&nbsp;</th>
-			<th class="axisx">A</th>
-			<th class="axisx">B</th>
-			<th class="axisx">C</th>
-			<th class="axisx">&nbsp;</th>
-			<th class="axisx">A</th>
-			<th class="axisx">B</th>
-			<th class="axisx">C</th>
-			<th class="axisx">&nbsp;</th>
-			<th class="axisx">A</th>
-			<th class="axisx">B</th>
-			<th class="axisx">C</th>
-			<th class="axisx">&nbsp;</th>
-			<th class="axisx">&nbsp;</th>
-			<th class="axisx" colspan="2">&nbsp;</th>
-		</tr>
-	</table>
-	</div>
-<?xml version="1.0" encoding="UTF-8"?>
-<note>
-	<to>Tove</to>
-	<from>Jani</from>
-	<heading>Reminder</heading>
-	<body>Don't forget me this weekend!</body>
-</note>
-	<!-- Display the countdown timer in an element -->
-	<p id="demo"></p>
-
-	<script>
-	// Set the date we're counting down to
-	var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
-
-	// Update the count down every 1 second
-	var x = setInterval(function() {
-
-	  // Get todays date and time
-	  var now = new Date().getTime();
-
-	  // Find the distance between now and the count down date
-	  var distance = countDownDate - now;
-
-	  // Time calculations for days, hours, minutes and seconds
-	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-	  // Display the result in the element with id="demo"
-	  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-	  + minutes + "m " + seconds + "s ";
-
-	  // If the count down is finished, write some text 
-	  if (distance < 0) {
-	    clearInterval(x);
-	    document.getElementById("demo").innerHTML = "EXPIRED";
-	  }
-	}, 1000);
-	</script>
+<script>
+function chargebattery() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf244;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf243;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf242;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf241;";
+    }, 3000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf240;";
+    }, 4000);
+}
+chargebattery();
+setInterval(chargebattery, 5000);
+</script>
 </div>
 
 </body>
