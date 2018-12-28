@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bootstrap 4</title>
+	<title>Bootstrap 1</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -421,7 +421,7 @@
 			  	Mr. Sovann Sok is a gaming person!
 		      </p>
 		      <a href="#" class="btn btn-primary">See Profile</a>
-		    </div>
+		    </div>z
 	  </div>
 	  <div class="card-columns">
 		<div class="alert alert-primary fade show">
@@ -726,30 +726,31 @@
 				<th>length:</th>
 			</tr>
 			<tr>
-				<td id="id"></td>
-				<td id="class"></td>
-				<td><input type="text" id="length"></td>
+				<td id="code"><input type="text" id onchange="id(length).innerHTML = id(text).length;"></td>
+				<td id="textLabel"><input type="text" id="text"></td>
+				<td><label type="text" id="length" style="background-color: white"></label></td>
 			</tr>
 			<tr>
-				<td id="id"></td>
-				<td id="class"></td>
-				<td><input type="text" id="length"></td>
+				<td id="code"><input type="text" id onchange="id(length).innerHTML = id(text).length;"></td>
+				<td id="textLabel"><input type="text" id="text"></td>
+				<td><label type="text" id="length" style="background-color: white"></label></td>
 			</tr>
 			<tr>
-				<td id="id"></td>
-				<td id="class"></td>
-				<td><input type="text" id="length"></td>
+				<td id="code"><input type="text" id onchange="id(length).innerHTML = id(text).length;"></td>
+				<td id="textLabel"><input type="text" id="text"></td>
+				<td><label type="text" id="length" style="background-color: white"></label></td>
 			</tr>
 			<tr>
-				<td id="id"></td>
-				<td id="class"></td>
-				<td><input type="text" id="length"></td>
+				<td id="code"><input type="text" id onchange="id(length).innerHTML = id(text).length;"></td>
+				<td id="textLabel"><input type="text" id="text"></td>
+				<td><label type="text" id="length" style="background-color: white"></label></td>
 			</tr>
 		</table>
 		<script type="text/javascript">
-			var id = document.getElementById("id");
-			var class = document.getElementById("class");
-			var length = document.getElementById("length");
+			function id(id) {
+				return document.getElementById(id).innerHTML;
+			}
+
 			function length() {
 				document.getElementById("length").innerHTML = length.length;
 			}
@@ -757,7 +758,7 @@
 			function random() {
 				var random = ["Roblox", "Block city wars", "Minecraft"];
 				var i=0;
-				for (i=0; i<7; i++) {
+				for (i=0; i<Math.random(11); i++) {
 					random[i]
 				}
 			}
@@ -806,6 +807,41 @@
     <input type="checkbox" class="form-check-input" value="" disabled>Disabled
   </label>
 </div>
+
+
+<script type="text/javascript">
+
+	var x = 1990;
+	var y = 21;
+	var xy = parseInt(x + y);
+	document.getElementById("text").innerHTML = xy;
+
+	function date() {
+		var date = new date();
+		document.getElementById("text2").innerHTML = date;
+	}
+
+	 function alert(id) {
+	 	var text = document.getElementById(id);
+	 	alert(text);
+	 	return id
+	 }
+</script>
+<script type="text/javascript">
+	work();
+
+	function add(p1, p2) {
+	  return p1 + p2;
+	}
+
+	function work() {
+	  	console.log(add("10" + "2" + "=" + parseInt(10 + 2)));
+	}
+
+	var string = "Hello world";
+</script>
+
+<div id="demo"></div>
 
 </body>
 </html>

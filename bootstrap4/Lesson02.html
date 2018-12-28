@@ -293,70 +293,17 @@
 	<button onclick="alert()">&nbsp;</button>
 	<input type="text" id="text">
   	<script type="text/javascript">
-  		for (i=0;i<11;i++) {
-  			var array =
-	  		var first = i;
-	  		var second = i;
-	  		var total = parseInt(first + second);
-			console.log(first + " + " + second + " = " + total + " ");
-		}
+  		var input = document.getElementById("inputText");
+		function console() {
+			console.log(input.indexOf("world"));
+		};
+		var text = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+		var str = "Please locate where 'locate' occurs!";
+		var pos = str.search("'locate'");
   	</script>
-  	<div id="person">
-  		<div id="head"></div>
-  		<div id="body"></div>
-  		<div id="leg1"></div>
-  	</div>
-  	<style type="text/css">
-  		#head {
-  			background-color: yellow;
-  			border-radius: 50%;
-  			width: 100px;
-  			height: 100px;
-  		}
-
-  		#body {
-  			background: green;
-  			width: 100px;
-  			height: 150px;
-  		}
-  	
-  		#leg1 {
-  			width: 100px;
-  			height: 150px;
-  			background-color: black;
-  		}
-  	</style>
-<style>
-#div1 {
-  font-size:48px;
-}
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body>
-
-<div id="div1" class="fa"></div>
-
-<script>
-function chargebattery() {
-  var a;
-  a = document.getElementById("div1");
-  a.innerHTML = "&#xf244;";
-  setTimeout(function () {
-      a.innerHTML = "&#xf243;";
-    }, 1000);
-  setTimeout(function () {
-      a.innerHTML = "&#xf242;";
-    }, 2000);
-  setTimeout(function () {
-      a.innerHTML = "&#xf241;";
-    }, 3000);
-  setTimeout(function () {
-      a.innerHTML = "&#xf240;";
-    }, 4000);
-}
-chargebattery();
-setInterval(chargebattery, 5000);
-</script>
+	<div id="string">
+		<input type="text" id="inputText" onchange="console()">
+	</div>
 </div>
 
 </body>
