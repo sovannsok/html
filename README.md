@@ -1,8 +1,8 @@
 
 # My HTML Adventure
 
-Git Instruction
----------------
+Git Instruction:
+----------------
 
 Push all your coding activities to GitHub by following the below instructions
 
